@@ -1,0 +1,346 @@
+Cmp-Mod V01 Created by Cvpcb (2015-05-13 BZR 5653)-product   date = Tue 09 Jun 2015 07:50:10 PM CEST
+
+BeginCmp
+TimeStamp = /55644339;
+Reference = 24V1;
+ValeurCmp = CONN_01X02;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-804_RM5mm_2pol;
+EndCmp
+
+BeginCmp
+TimeStamp = /55558214;
+Reference = A4/A5;
+ValeurCmp = Header;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /55676701;
+Reference = air1;
+ValeurCmp = AQY212;
+IdModule  = bullestock-kicad-footprints:DIP-4_SMD_300;
+EndCmp
+
+BeginCmp
+TimeStamp = /555509B7;
+Reference = Arduino1;
+ValeurCmp = Header;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x12;
+EndCmp
+
+BeginCmp
+TimeStamp = /55550BD3;
+Reference = Arduino2;
+ValeurCmp = Header;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x12;
+EndCmp
+
+BeginCmp
+TimeStamp = /5562BFBB;
+Reference = Assists1;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /55649803;
+Reference = AutoReset1;
+ValeurCmp = CONN_01X02;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /55678782;
+Reference = aux1;
+ValeurCmp = aqy212;
+IdModule  = bullestock-kicad-footprints:DIP-4_SMD_300;
+EndCmp
+
+BeginCmp
+TimeStamp = /5565517C;
+Reference = C3;
+ValeurCmp = 10u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /5562A856;
+Reference = C4;
+ValeurCmp = 47u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_11.2x6.3mm_RM2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /5565281C;
+Reference = C5;
+ValeurCmp = 1000u;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_20x10mm_RM5to7.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C0433;
+Reference = C9;
+ValeurCmp = 100n;
+IdModule  = Capacitors_SMD:C_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C09A5;
+Reference = C10;
+ValeurCmp = 100n;
+IdModule  = Capacitors_SMD:C_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BEC24;
+Reference = chiller1;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /5563B2A9;
+Reference = D1;
+ValeurCmp = 1N4004;
+IdModule  = Diodes_ThroughHole:Diode_DO-41_SOD81_Vertical_AnodeUp;
+EndCmp
+
+BeginCmp
+TimeStamp = /5563B2F0;
+Reference = D2;
+ValeurCmp = 1N4004;
+IdModule  = Diodes_ThroughHole:Diode_DO-41_SOD81_Vertical_AnodeUp;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BC2DA;
+Reference = door1;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BC2A6;
+Reference = door2;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /5562A197;
+Reference = E-stop1;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BBA0D;
+Reference = IC1;
+ValeurCmp = 7411;
+IdModule  = SMD_Packages:SOIC-14_N;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BE096;
+Reference = IC2;
+ValeurCmp = 7410;
+IdModule  = SMD_Packages:SOIC-14_N;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BF893;
+Reference = laser1;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /55623D19;
+Reference = P1;
+ValeurCmp = AC IN;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-804_RM5mm_2pol;
+EndCmp
+
+BeginCmp
+TimeStamp = /55624C1A;
+Reference = P2;
+ValeurCmp = AC out;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-804_RM5mm_2pol;
+EndCmp
+
+BeginCmp
+TimeStamp = /55624C5D;
+Reference = P3;
+ValeurCmp = 5V in;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-804_RM5mm_2pol;
+EndCmp
+
+BeginCmp
+TimeStamp = /5562A8A8;
+Reference = P6;
+ValeurCmp = AQV2526;
+IdModule  = Housings_DIP:DIP-6__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BD829;
+Reference = R1;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BD804;
+Reference = R2;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BD7D2;
+Reference = R3;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /555FD5E8;
+Reference = R4;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5555B55D;
+Reference = R5;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5555B528;
+Reference = R6;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /55606132;
+Reference = R7;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C08F0;
+Reference = R8;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /554C0934;
+Reference = R9;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5563A798;
+Reference = R10;
+ValeurCmp = 360R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5563A7E5;
+Reference = R11;
+ValeurCmp = 360R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5577258B;
+Reference = R12;
+ValeurCmp = 6K5;
+IdModule  = Resistors_ThroughHole:Resistor_Vertical_RM5mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /55772602;
+Reference = R13;
+ValeurCmp = 10K;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5562AB38;
+Reference = R17;
+ValeurCmp = 360R;
+IdModule  = Resistors_SMD:R_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /5564916C;
+Reference = RPi1;
+ValeurCmp = CONN_01X04;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x04;
+EndCmp
+
+BeginCmp
+TimeStamp = /5568B86E;
+Reference = SSR1;
+ValeurCmp = PF240D25;
+IdModule  = bullestock-kicad-footprints:CrydomPF240;
+EndCmp
+
+BeginCmp
+TimeStamp = /5560E737;
+Reference = Steppers1;
+ValeurCmp = Screw terminal;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-804_RM5mm_7pol;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BC1BB;
+Reference = x1;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BC201;
+Reference = x2;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BC24B;
+Reference = y1;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BC271;
+Reference = y2;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BC305;
+Reference = z1;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+BeginCmp
+TimeStamp = /554BC339;
+Reference = z2;
+ValeurCmp = RJ45;
+IdModule  = bullestock-kicad-footprints:RJ45-8-shield;
+EndCmp
+
+EndListe

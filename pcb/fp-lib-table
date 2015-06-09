@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name mojes-kicad-footprints)(type KiCad)(uri "$(KIPRJMOD)/libs/mojes-kicad-footprints.pretty")(options "")(descr ""))
+  (lib (name bullestock-kicad-footprints)(type KiCad)(uri "$(KIPRJMOD)/libs/bullestock-kicad-footprints.pretty")(options "")(descr ""))
+  (lib (name r_rj45)(type Legacy)(uri "$(KIPRJMOD)/libs/r_rj45.mod")(options "")(descr ""))
+)

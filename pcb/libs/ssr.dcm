@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CPC1017N
+D opto mos
+K SWITCH OPTO
+F opto/cpc1017n.pdf
+$ENDCMP
+#
+#End Doc Library
