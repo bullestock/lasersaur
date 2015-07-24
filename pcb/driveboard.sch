@@ -726,7 +726,7 @@ F 3 "" H 2050 9250 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 2650 4900 2150
+	4900 3300 4900 2150
 Wire Wire Line
 	4900 2150 8800 2150
 Wire Wire Line
@@ -823,7 +823,7 @@ Wire Wire Line
 Wire Wire Line
 	7800 5150 11750 5150
 Wire Wire Line
-	6100 5600 4750 5600
+	4750 5600 6100 5600
 Wire Wire Line
 	4350 6350 4750 6350
 Wire Wire Line
@@ -856,8 +856,6 @@ Connection ~ 4250 7050
 Wire Wire Line
 	5050 7050 5350 7050
 Connection ~ 5350 7050
-Wire Wire Line
-	4750 2650 4900 2650
 Wire Wire Line
 	7950 3600 7950 4150
 Wire Wire Line
@@ -987,7 +985,7 @@ Wire Wire Line
 Wire Wire Line
 	4000 3500 4000 3700
 Wire Wire Line
-	3900 3300 4750 3300
+	3900 3300 4900 3300
 Wire Wire Line
 	3900 3200 5900 3200
 Wire Wire Line
@@ -1250,7 +1248,7 @@ Connection ~ 3150 10100
 Wire Wire Line
 	2350 9150 4550 9150
 Wire Wire Line
-	3400 9150 3400 9600
+	3400 6100 3400 9600
 Wire Wire Line
 	4250 8650 4250 10500
 Wire Wire Line
@@ -1503,7 +1501,7 @@ Connection ~ 5100 5600
 Wire Wire Line
 	4750 5600 4750 7050
 Wire Wire Line
-	4750 3300 4750 5100
+	4750 3300 4750 5500
 $Comp
 L GND #PWR?
 U 1 1 55B1536C
@@ -1532,4 +1530,12 @@ F 3 "" H 12500 5950 60  0000 C CNN
 	1    12500 5950
 	1    0    0    -1  
 $EndComp
+Connection ~ 4750 3300
+Wire Wire Line
+	4750 5500 4600 5500
+Wire Wire Line
+	4600 5500 4600 6100
+Wire Wire Line
+	4600 6100 3400 6100
+Connection ~ 4750 5100
 $EndSCHEMATC
