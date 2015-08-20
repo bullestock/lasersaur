@@ -726,7 +726,7 @@ F 3 "" H 2050 9250 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	4900 2650 4900 2150
+	4900 3300 4900 2150
 Wire Wire Line
 	4900 2150 8800 2150
 Wire Wire Line
@@ -823,7 +823,7 @@ Wire Wire Line
 Wire Wire Line
 	7800 5150 11750 5150
 Wire Wire Line
-	6100 5600 4750 5600
+	4750 5600 6100 5600
 Wire Wire Line
 	4350 6350 4750 6350
 Wire Wire Line
@@ -856,8 +856,6 @@ Connection ~ 4250 7050
 Wire Wire Line
 	5050 7050 5350 7050
 Connection ~ 5350 7050
-Wire Wire Line
-	4750 2650 4900 2650
 Wire Wire Line
 	7950 3600 7950 4150
 Wire Wire Line
@@ -956,9 +954,9 @@ Wire Wire Line
 	11750 4750 11400 4750
 Connection ~ 11400 4750
 Wire Wire Line
-	10900 8200 12800 8200
+	12800 8200 10900 8200
 Wire Wire Line
-	12800 8200 12800 6950
+	12800 6950 12800 8200
 Connection ~ 13000 6950
 Wire Wire Line
 	11100 6450 11100 7000
@@ -987,7 +985,7 @@ Wire Wire Line
 Wire Wire Line
 	4000 3500 4000 3700
 Wire Wire Line
-	3900 3300 4750 3300
+	3900 3300 4900 3300
 Wire Wire Line
 	3900 3200 5900 3200
 Wire Wire Line
@@ -1518,4 +1516,19 @@ $EndComp
 Wire Wire Line
 	5100 6000 5350 6000
 Connection ~ 5100 6000
+Wire Wire Line
+	12500 5650 12350 5650
+Connection ~ 12350 5650
+$Comp
+L GND #PWR?
+U 1 1 55B1611D
+P 12500 5950
+F 0 "#PWR?" H 12500 5700 50  0001 C CNN
+F 1 "GND" H 12500 5800 50  0000 C CNN
+F 2 "" H 12500 5950 60  0000 C CNN
+F 3 "" H 12500 5950 60  0000 C CNN
+	1    12500 5950
+	1    0    0    -1  
+$EndComp
+Connection ~ 4750 3300
 $EndSCHEMATC
