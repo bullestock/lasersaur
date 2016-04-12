@@ -6,11 +6,13 @@
 #define IN_DIS     4
 // Must support interrupt
 #define IN_TH      2
-#define IN_AUX     6
-#define OUT_LED    3
+#define IN_AUX     3
+#define OUT_LED    5
+#define OUT_RELAY  10
+
 int INTERNAL_LED = 13;
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, OUT_LED, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, OUT_LED, NEO_RGB + NEO_KHZ800);
 
 void setup()
 {
@@ -28,6 +30,7 @@ void setup()
 
     pinMode(INTERNAL_LED, OUTPUT); 
     pinMode(OUT_LED, OUTPUT); 
+    pinMode(OUT_RELAY, OUTPUT); 
     
     strip.begin();
     strip.show(); // Initialize all pixels to 'off'
@@ -44,17 +47,20 @@ void loop()
     while (1)
     {
         digitalWrite(INTERNAL_LED, HIGH);
-        // Red
+        digitalWrite(OUT_RELAY, HIGH);
+        // Green
         strip.setPixelColor(0, strip.Color(0, 255, 0));
         strip.show();
         delay(500);
         // Yellow
         strip.setPixelColor(0, strip.Color(255, 127, 0));
         strip.show();
-        delay(500);
-        // Green
+        delay(2000);
+        // Red
+        digitalWrite(INTERNAL_LED, LOW);
+        digitalWrite(OUT_RELAY, LOW);
         strip.setPixelColor(0, strip.Color(255, 0, 16));
         strip.show();
-        delay(500);
+        delay(5000);
     }
 }
