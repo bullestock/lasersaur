@@ -10,14 +10,27 @@
 #define OUT_LED    5
 #define OUT_RELAY  10
 
+#define SERIAL_DBG 0
+
 int INTERNAL_LED = 13;
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, OUT_LED, NEO_RGB + NEO_KHZ800);
 
+void green()
+{
+    // Green
+    strip.setPixelColor(0, strip.Color(0, 255, 0));
+    strip.show();
+}
+
 void setup()
 {
+    strip.begin();
+    green();
+
 #if SERIAL_DBG
     Serial.begin(57600);
+    Serial.println("Ready");
 #endif
 
     // Set up interrupt
@@ -31,36 +44,82 @@ void setup()
     pinMode(INTERNAL_LED, OUTPUT); 
     pinMode(OUT_LED, OUTPUT); 
     pinMode(OUT_RELAY, OUTPUT); 
-    
-    strip.begin();
-    strip.show(); // Initialize all pixels to 'off'
 }
+
+int trgd = 0;
 
 // Interrupt function
 void th_int()
 { 
-
+    trgd = 1;
 } 
+
+void yellow()
+{
+    //digitalWrite(OUT_RELAY, HIGH);
+    strip.setPixelColor(0, strip.Color(255, 127, 0));
+    strip.show();
+}
+
+void red()
+{
+    strip.setPixelColor(0, strip.Color(255, 0, 16));
+    strip.show();
+}
+
+int relay_on = 0;
+
+unsigned long aux_off_millis = 0;
+int timer_active = 0;
+
+unsigned long delay_millis = 60*1000L;
 
 void loop()
 {
-    while (1)
+    // LED
+    
+    if (trgd)
     {
-        digitalWrite(INTERNAL_LED, HIGH);
-        digitalWrite(OUT_RELAY, HIGH);
-        // Green
-        strip.setPixelColor(0, strip.Color(0, 255, 0));
-        strip.show();
-        delay(500);
-        // Yellow
-        strip.setPixelColor(0, strip.Color(255, 127, 0));
-        strip.show();
-        delay(2000);
-        // Red
-        digitalWrite(INTERNAL_LED, LOW);
-        digitalWrite(OUT_RELAY, LOW);
-        strip.setPixelColor(0, strip.Color(255, 0, 16));
-        strip.show();
-        delay(5000);
+        trgd = 0;
+        red();
+        delay(100);
     }
+    else
+    {
+        if (!digitalRead(IN_DIS))
+            yellow();
+        else
+            green();
+    }
+
+    // Relay
+
+    if (digitalRead(IN_AUX))
+        relay_on = 1;
+    else
+    {
+        // Turn relay off after delay
+        if (relay_on && !timer_active)
+        {
+            timer_active = 1;
+            aux_off_millis = millis();
+        }
+        if (timer_active)
+        {
+            const unsigned long elapsed = millis() - aux_off_millis;
+#if SERIAL_DBG
+            Serial.print("E ");
+            Serial.print(elapsed);
+            Serial.print(" L ");
+            Serial.println(delay_millis);
+#endif
+            if (elapsed > delay_millis)
+            {
+                relay_on = 0;
+                timer_active = 0;
+            }
+        }
+    }
+
+    digitalWrite(OUT_RELAY, relay_on);
 }
