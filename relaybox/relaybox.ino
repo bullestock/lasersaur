@@ -10,7 +10,7 @@
 #define OUT_LED    5
 #define OUT_RELAY  10
 
-#define SERIAL_DBG 0
+#define SERIAL_DBG 1
 
 int INTERNAL_LED = 13;
 
@@ -67,6 +67,12 @@ void red()
     strip.show();
 }
 
+void orange()
+{
+    strip.setPixelColor(0, strip.Color(255, 127, 0));
+    strip.show();
+}
+
 int relay_on = 0;
 
 unsigned long aux_off_millis = 0;
@@ -74,28 +80,48 @@ int timer_active = 0;
 
 unsigned long delay_millis = 60*1000L;
 
+int aux1_on_count = 0;
+
 void loop()
 {
     // LED
     
+    const bool disable_active = digitalRead(IN_DIS);
+
     if (trgd)
     {
         trgd = 0;
-        red();
-        delay(100);
+        if (disable_active)
+            orange();
+        else
+            red();
     }
     else
     {
-        if (!digitalRead(IN_DIS))
+        if (!disable_active)
             yellow();
         else
             green();
     }
 
+    delay(100);
+
     // Relay
 
-    if (digitalRead(IN_AUX))
-        relay_on = 1;
+    const bool blower_on = digitalRead(IN_AUX);
+    if (blower_on)
+    {
+        // Turn relay on after AUX2 has been high for 5 iterations (0.5 second)
+        if (!relay_on)
+        {
+            ++aux1_on_count;
+            if (aux1_on_count > 5)
+            {
+                relay_on = 1;
+                aux1_on_count = 0;
+            }
+        }
+    }
     else
     {
         // Turn relay off after delay
@@ -106,6 +132,11 @@ void loop()
         }
         if (timer_active)
         {
+            if (blower_on)
+            {
+                // Glitch, restart timer
+                aux_off_millis = millis();
+            }
             const unsigned long elapsed = millis() - aux_off_millis;
 #if SERIAL_DBG
             Serial.print("E ");
