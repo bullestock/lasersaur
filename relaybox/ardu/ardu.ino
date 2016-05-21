@@ -3,12 +3,15 @@
 
 // Digital Pins
 
-#define IN_DIS     4
 // Must support interrupt
 #define IN_TH      2
 #define IN_AUX     3
+#define IN_DIS     4
 #define OUT_LED    5
-#define OUT_RELAY  10
+#define OUT_VENT   7
+#define OUT_AIR    8
+#define OUT_LASER  9
+#define OUT_LEDPWR 10
 
 #define SERIAL_DBG 1
 
@@ -16,23 +19,8 @@ int INTERNAL_LED = 13;
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, OUT_LED, NEO_RGB + NEO_KHZ800);
 
-void green()
-{
-    // Green
-    strip.setPixelColor(0, strip.Color(0, 255, 0));
-    strip.show();
-}
-
 void setup()
 {
-    strip.begin();
-    green();
-
-#if SERIAL_DBG
-    Serial.begin(57600);
-    Serial.println("Ready");
-#endif
-
     // Set up interrupt
     
     pinMode(IN_TH, INPUT);
@@ -43,7 +31,25 @@ void setup()
 
     pinMode(INTERNAL_LED, OUTPUT); 
     pinMode(OUT_LED, OUTPUT); 
-    pinMode(OUT_RELAY, OUTPUT); 
+    pinMode(OUT_LEDPWR, OUTPUT); 
+    pinMode(OUT_VENT, OUTPUT); 
+    pinMode(OUT_AIR, OUTPUT); 
+    pinMode(OUT_LASER, OUTPUT); 
+
+    digitalWrite(OUT_LED, LOW); 
+    digitalWrite(OUT_LEDPWR, LOW); 
+    digitalWrite(OUT_VENT, LOW); 
+    digitalWrite(OUT_AIR, LOW); 
+    digitalWrite(OUT_LASER, LOW); 
+
+    digitalWrite(OUT_LEDPWR, HIGH);
+    strip.begin();
+    green();
+
+#if SERIAL_DBG
+    Serial.begin(57600);
+    Serial.println("Ready");
+#endif
 }
 
 int trgd = 0;
@@ -54,23 +60,30 @@ void th_int()
     trgd = 1;
 } 
 
+void setcolour(int r, int g, int b)
+{
+    strip.setPixelColor(0, strip.Color(r, g, b));
+    strip.show();
+}
+
+void green()
+{
+    setcolour(0, 255, 0);
+}
+
 void yellow()
 {
-    //digitalWrite(OUT_RELAY, HIGH);
-    strip.setPixelColor(0, strip.Color(255, 127, 0));
-    strip.show();
+    setcolour(255, 127, 0);
 }
 
 void red()
 {
-    strip.setPixelColor(0, strip.Color(255, 0, 16));
-    strip.show();
+    setcolour(255, 0, 16);
 }
 
 void orange()
 {
-    strip.setPixelColor(0, strip.Color(255, 127, 0));
-    strip.show();
+    setcolour(255, 127, 0);
 }
 
 int relay_on = 0;
@@ -84,6 +97,35 @@ int aux1_on_count = 0;
 
 void loop()
 {
+#if 1
+    // TEST
+    green();
+    digitalWrite(OUT_VENT, HIGH);
+    delay(5000);
+    digitalWrite(OUT_VENT, LOW);
+
+    digitalWrite(INTERNAL_LED, HIGH);
+    delay(1000);
+    digitalWrite(INTERNAL_LED, LOW);
+    
+    orange();
+    digitalWrite(OUT_AIR, HIGH);
+    delay(5000);
+    digitalWrite(OUT_AIR, LOW);
+
+    digitalWrite(INTERNAL_LED, HIGH);
+    delay(1000);
+    digitalWrite(INTERNAL_LED, LOW);
+    
+    red();
+    digitalWrite(OUT_LASER, HIGH);
+    delay(5000);
+    digitalWrite(OUT_LASER, LOW);
+
+    digitalWrite(INTERNAL_LED, HIGH);
+    delay(1000);
+    digitalWrite(INTERNAL_LED, LOW);
+#else
     // LED
     
     const bool disable_active = digitalRead(IN_DIS);
@@ -153,4 +195,5 @@ void loop()
     }
 
     digitalWrite(OUT_RELAY, relay_on);
+#endif
 }

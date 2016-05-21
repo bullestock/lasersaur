@@ -1,4 +1,4 @@
-update=Fri 06 May 2016 08:05:49 PM CEST
+update=Tue 17 May 2016 09:26:28 PM CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -58,3 +58,16 @@ LibName26=siliconi
 LibName27=opto
 LibName28=atmel
 LibName29=relays
+LibName30=ArduProMiniTKB
+LibName31=wakeUpLamp
+LibName32=borniers
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
