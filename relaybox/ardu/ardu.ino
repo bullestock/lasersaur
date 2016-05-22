@@ -13,11 +13,13 @@
 #define OUT_LASER  9
 #define OUT_LEDPWR 10
 
+#define NOF_LEDS   3
+
 #define SERIAL_DBG 1
 
 int INTERNAL_LED = 13;
 
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(1, OUT_LED, NEO_RGB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(NOF_LEDS, OUT_LED, NEO_RGB + NEO_KHZ800);
 
 void setup()
 {
@@ -62,7 +64,8 @@ void th_int()
 
 void setcolour(int r, int g, int b)
 {
-    strip.setPixelColor(0, strip.Color(r, g, b));
+    for (int i = 0; i < NOF_LEDS; ++i)
+        strip.setPixelColor(i, strip.Color(r, g, b));
     strip.show();
 }
 
@@ -78,7 +81,7 @@ void yellow()
 
 void red()
 {
-    setcolour(255, 0, 16);
+    setcolour(255, 0, 0);
 }
 
 void orange()
