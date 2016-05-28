@@ -89,18 +89,19 @@ void orange()
     setcolour(255, 127, 0);
 }
 
-int relay_on = 0;
+int blower_relay_on = 0;
 
 unsigned long aux_off_millis = 0;
 int timer_active = 0;
 
-unsigned long delay_millis = 60*1000L;
+// Delay before turning blower off
+unsigned long delay_millis = 3*60*1000L;
 
 int aux1_on_count = 0;
 
 void loop()
 {
-#if 1
+#if 0
     // TEST
     green();
     digitalWrite(OUT_VENT, HIGH);
@@ -131,6 +132,8 @@ void loop()
 #else
     // LED
     
+    digitalWrite(INTERNAL_LED, HIGH);
+
     const bool disable_active = digitalRead(IN_DIS);
 
     if (trgd)
@@ -151,26 +154,36 @@ void loop()
 
     delay(100);
 
-    // Relay
+    digitalWrite(INTERNAL_LED, LOW);
+
+    // Blower
 
     const bool blower_on = digitalRead(IN_AUX);
     if (blower_on)
     {
-        // Turn relay on after AUX2 has been high for 5 iterations (0.5 second)
-        if (!relay_on)
+        // Turn ventilation/air on after AUX2 has been high for 5 iterations (0.5 second)
+        if (!blower_relay_on)
         {
             ++aux1_on_count;
             if (aux1_on_count > 5)
             {
-                relay_on = 1;
+                blower_relay_on = 1;
                 aux1_on_count = 0;
+                // Turn air on
+                digitalWrite(OUT_AIR, HIGH);
+                // Turn laser PSU on
+                digitalWrite(OUT_LASER, HIGH);
             }
         }
     }
     else
     {
-        // Turn relay off after delay
-        if (relay_on && !timer_active)
+        // Turn air off
+        digitalWrite(OUT_AIR, LOW);
+        // Turn laser PSU off
+        digitalWrite(OUT_LASER, LOW);
+        // Turn blower relay off after delay
+        if (blower_relay_on && !timer_active)
         {
             timer_active = 1;
             aux_off_millis = millis();
@@ -191,12 +204,23 @@ void loop()
 #endif
             if (elapsed > delay_millis)
             {
-                relay_on = 0;
+                blower_relay_on = 0;
                 timer_active = 0;
             }
         }
     }
 
-    digitalWrite(OUT_RELAY, relay_on);
+    delay(100);
+    digitalWrite(OUT_VENT, blower_relay_on);
+
+#if SERIAL_DBG
+    Serial.print("DIS ");
+    Serial.print(disable_active);
+    Serial.print(" AUX ");
+    Serial.println(blower_on);
+    Serial.print(" BLOWER ");
+    Serial.println(blower_relay_on);
+#endif
+
 #endif
 }

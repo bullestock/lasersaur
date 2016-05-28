@@ -181,17 +181,6 @@ F 3 "" H 8550 2650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Q_NPN_BCE Q5
-U 1 1 572CF4AD
-P 8550 5600
-F 0 "Q5" H 8850 5650 50  0000 R CNN
-F 1 "BC547" H 9000 5550 50  0000 R CNN
-F 2 "" H 8750 5700 50  0000 C CNN
-F 3 "" H 8550 5600 50  0000 C CNN
-	1    8550 5600
-	1    0    0    -1  
-$EndComp
-$Comp
 L +5V #PWR?
 U 1 1 572CF4F8
 P 8650 4800
@@ -201,17 +190,6 @@ F 2 "" H 8650 4800 50  0000 C CNN
 F 3 "" H 8650 4800 50  0000 C CNN
 	1    8650 4800
 	1    0    0    -1  
-$EndComp
-$Comp
-L R R6
-U 1 1 572CF52A
-P 8200 5600
-F 0 "R6" V 8280 5600 50  0000 C CNN
-F 1 "1K" V 8200 5600 50  0000 C CNN
-F 2 "" V 8130 5600 50  0000 C CNN
-F 3 "" H 8200 5600 50  0000 C CNN
-	1    8200 5600
-	0    1    1    0   
 $EndComp
 $Comp
 L R R4
@@ -322,8 +300,8 @@ Text Notes 10700 1200 0    60   ~ 0
 5V PSU
 Text Notes 10700 1600 0    60   ~ 0
 24V PSU
-Text Notes 10700 2200 0    60   ~ 0
-LASER PSU
+Text Notes 10700 2200 0    39   ~ 0
+LASER PSU/\nCHILLER
 Text Notes 10700 2000 0    60   ~ 0
 AIR PUMP
 Text Notes 10700 1400 0    60   ~ 0
@@ -759,16 +737,10 @@ Text GLabel 7800 4100 0    60   Input ~ 0
 RL4C
 Wire Wire Line
 	7800 4100 8050 4100
-Text GLabel 7800 5600 0    60   Input ~ 0
-RL5C
-Wire Wire Line
-	7800 5600 8050 5600
 Text GLabel 4700 4700 0    60   Input ~ 0
 RL3C
 Text GLabel 4700 4800 0    60   Input ~ 0
 RL4C
-Text GLabel 4700 4900 0    60   Input ~ 0
-RL5C
 Wire Wire Line
 	4700 4100 4550 4100
 Wire Wire Line
@@ -825,4 +797,26 @@ Wire Wire Line
 	4000 5300 5900 5300
 Wire Wire Line
 	5900 5300 5900 4900
+NoConn ~ 4700 4900
+$Comp
+L CONN_01X02 P?
+U 1 1 57438455
+P 7700 5550
+F 0 "P?" H 7700 5700 50  0000 C CNN
+F 1 "CONN_01X02" V 7800 5550 50  0000 C CNN
+F 2 "" H 7700 5550 50  0000 C CNN
+F 3 "" H 7700 5550 50  0000 C CNN
+	1    7700 5550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7900 5500 8650 5500
+Wire Wire Line
+	8650 5500 8650 5400
+Wire Wire Line
+	7900 5600 8650 5600
+Wire Wire Line
+	8650 5600 8650 5800
+Text Notes 7200 5600 0    60   ~ 0
+Chiller\nswitch
 $EndSCHEMATC

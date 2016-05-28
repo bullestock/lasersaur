@@ -1,4 +1,4 @@
-update=Fri 29 May 2015 08:55:58 PM CEST
+update=Sat 28 May 2016 08:10:26 PM CEST
 version=1
 last_client=kicad
 [pcbnew]
@@ -65,3 +65,13 @@ LibName33=libs/arduino
 LibName34=libs/dip4
 LibName35=libs/w_opto
 LibName36=libs/w_relay
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

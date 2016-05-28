@@ -181,17 +181,6 @@ F 3 "" H 8550 2650 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Q_NPN_BCE Q5
-U 1 1 572CF4AD
-P 8550 5600
-F 0 "Q5" H 8850 5650 50  0000 R CNN
-F 1 "BC547" H 9000 5550 50  0000 R CNN
-F 2 "" H 8750 5700 50  0000 C CNN
-F 3 "" H 8550 5600 50  0000 C CNN
-	1    8550 5600
-	1    0    0    -1  
-$EndComp
-$Comp
 L +5V #PWR?
 U 1 1 572CF4F8
 P 8650 4800
@@ -201,17 +190,6 @@ F 2 "" H 8650 4800 50  0000 C CNN
 F 3 "" H 8650 4800 50  0000 C CNN
 	1    8650 4800
 	1    0    0    -1  
-$EndComp
-$Comp
-L R R6
-U 1 1 572CF52A
-P 8200 5600
-F 0 "R6" V 8280 5600 50  0000 C CNN
-F 1 "1K" V 8200 5600 50  0000 C CNN
-F 2 "" V 8130 5600 50  0000 C CNN
-F 3 "" H 8200 5600 50  0000 C CNN
-	1    8200 5600
-	0    1    1    0   
 $EndComp
 $Comp
 L R R4
@@ -322,8 +300,8 @@ Text Notes 10700 1200 0    60   ~ 0
 5V PSU
 Text Notes 10700 1600 0    60   ~ 0
 24V PSU
-Text Notes 10700 2200 0    60   ~ 0
-LASER PSU
+Text Notes 10700 2200 0    39   ~ 0
+LASER PSU/\nCHILLER
 Text Notes 10700 2000 0    60   ~ 0
 AIR PUMP
 Text Notes 10700 1400 0    60   ~ 0
@@ -458,14 +436,14 @@ F0 "leds" 59
 F1 "leds.sch" 59
 $EndSheet
 $Comp
-L CONN_01X02 P?
+L CONN_01X03 P?
 U 1 1 57368797
-P 3550 5700
-F 0 "P?" H 3550 5850 50  0000 C CNN
-F 1 "CONN_01X02" V 3650 5700 50  0000 C CNN
-F 2 "" H 3550 5700 50  0000 C CNN
-F 3 "" H 3550 5700 50  0000 C CNN
-	1    3550 5700
+P 3600 5700
+F 0 "P?" H 3600 5850 50  0000 C CNN
+F 1 "CONN_01X02" V 3700 5700 50  0000 C CNN
+F 2 "" H 3600 5700 50  0000 C CNN
+F 3 "" H 3600 5700 50  0000 C CNN
+	1    3600 5700
 	0    1    1    0   
 $EndComp
 $Comp
@@ -481,41 +459,8 @@ F 3 "" H 2950 5650 50  0000 C CNN
 $EndComp
 Text Notes 3450 6000 0    60   ~ 0
 LEDS
-$Comp
-L CONN_01X02 P?
-U 1 1 5736893E
-P 4250 5700
-F 0 "P?" H 4250 5850 50  0000 C CNN
-F 1 "CONN_01X02" V 4350 5700 50  0000 C CNN
-F 2 "" H 4250 5700 50  0000 C CNN
-F 3 "" H 4250 5700 50  0000 C CNN
-	1    4250 5700
-	0    1    1    0   
-$EndComp
 Text Notes 3950 6000 0    60   ~ 0
 Chiller switch
-$Comp
-L R R?
-U 1 1 57368D7B
-P 3900 5500
-F 0 "R?" V 3980 5500 50  0000 C CNN
-F 1 "1K" V 3900 5500 50  0000 C CNN
-F 2 "" V 3830 5500 50  0000 C CNN
-F 3 "" H 3900 5500 50  0000 C CNN
-	1    3900 5500
-	0    1    1    0   
-$EndComp
-$Comp
-L +5V #PWR?
-U 1 1 57368EBE
-P 4300 5500
-F 0 "#PWR?" H 4300 5350 50  0001 C CNN
-F 1 "+5V" H 4300 5640 50  0000 C CNN
-F 2 "" H 4300 5500 50  0000 C CNN
-F 3 "" H 4300 5500 50  0000 C CNN
-	1    4300 5500
-	1    0    0    -1  
-$EndComp
 $Comp
 L CONN_01X20 P?
 U 1 1 5736AAF4
@@ -654,18 +599,7 @@ Wire Wire Line
 Wire Wire Line
 	3450 4200 4700 4200
 Wire Wire Line
-	2950 5500 3750 5500
-Wire Wire Line
-	3800 5500 3850 5500
-Wire Wire Line
 	2950 5500 2950 5650
-Wire Wire Line
-	4050 5500 4200 5500
-Wire Wire Line
-	4200 5500 4200 4600
-Wire Wire Line
-	4200 4600 4700 4600
-Connection ~ 4200 5500
 Wire Wire Line
 	9150 1100 9150 1850
 Connection ~ 9150 1100
@@ -795,7 +729,6 @@ Wire Wire Line
 Wire Wire Line
 	5150 2300 5500 2300
 Connection ~ 5500 2300
-Connection ~ 3500 5500
 Text GLabel 7800 2650 0    60   Input ~ 0
 RL3C
 Wire Wire Line
@@ -804,16 +737,10 @@ Text GLabel 7800 4100 0    60   Input ~ 0
 RL4C
 Wire Wire Line
 	7800 4100 8050 4100
-Text GLabel 7800 5600 0    60   Input ~ 0
-RL5C
-Wire Wire Line
-	7800 5600 8050 5600
 Text GLabel 4700 4700 0    60   Input ~ 0
 RL3C
 Text GLabel 4700 4800 0    60   Input ~ 0
 RL4C
-Text GLabel 4700 4900 0    60   Input ~ 0
-RL5C
 Wire Wire Line
 	4700 4100 4550 4100
 Wire Wire Line
@@ -825,7 +752,6 @@ Wire Wire Line
 Wire Wire Line
 	6500 4400 6250 4400
 Connection ~ 6250 4400
-NoConn ~ 5900 4900
 $Comp
 L CONN_01X02 P?
 U 1 1 5738BEA8
@@ -842,4 +768,34 @@ Wire Wire Line
 Connection ~ 4350 3000
 Text Notes 3450 2800 2    60   ~ 0
 RPi Power Off
+NoConn ~ 4700 4600
+Wire Wire Line
+	3500 5500 2950 5500
+$Comp
+L Q_NMOS_DSG Q?
+U 1 1 5738CBB1
+P 3800 5300
+F 0 "Q?" H 4100 5350 50  0000 R CNN
+F 1 "Q_NMOS_DSG" H 4450 5250 50  0000 R CNN
+F 2 "" H 4000 5400 50  0000 C CNN
+F 3 "" H 3800 5300 50  0000 C CNN
+	1    3800 5300
+	-1   0    0    1   
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5738CC14
+P 3700 5100
+F 0 "#PWR?" H 3700 4950 50  0001 C CNN
+F 1 "+5V" H 3700 5240 50  0000 C CNN
+F 2 "" H 3700 5100 50  0000 C CNN
+F 3 "" H 3700 5100 50  0000 C CNN
+	1    3700 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 5300 5900 5300
+Wire Wire Line
+	5900 5300 5900 4900
+NoConn ~ 4700 4900
 $EndSCHEMATC
