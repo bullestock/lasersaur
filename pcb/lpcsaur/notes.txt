@@ -1,0 +1,14 @@
+http://smoothieware.org/laser-cutter-guide
+
+BOM
+
+uSD holder
+
+LPC1768
+
+XTAL?
+
+Buttons (check HAL)
+
+USB connector
+
