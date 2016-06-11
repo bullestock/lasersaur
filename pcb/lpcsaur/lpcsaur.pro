@@ -1,4 +1,4 @@
-update=Fri 10 Jun 2016 08:19:32 PM CEST
+update=Sat 11 Jun 2016 10:57:18 AM CEST
 last_client=kicad
 [cvpcb]
 version=1
@@ -92,4 +92,5 @@ LibName31=lpcsaur
 LibName32=lm1117
 LibName33=driveboard2
 LibName34=w_logic
+LibName35=w_device
 
