@@ -1,4 +1,4 @@
-update=Sat 11 Jun 2016 10:57:18 AM CEST
+update=Tue 14 Jun 2016 11:18:28 PM CEST
 last_client=kicad
 [cvpcb]
 version=1
@@ -44,16 +44,6 @@ LibName15=pga_sockets
 LibName16=valves
 LibName17=lerchetech
 LibName18=modules/w_logo
-[schematic_editor]
-version=1
-PageLayoutDescrFile=
-PlotDirectoryName=
-SubpartIdSeparator=0
-SubpartFirstId=65
-NetFmtName=
-SpiceForceRefPrefix=0
-SpiceUseNetNumbers=0
-LabSize=60
 [eeschema]
 version=1
 LibDir=../../KiCAD Library
@@ -93,4 +83,14 @@ LibName32=lm1117
 LibName33=driveboard2
 LibName34=w_logic
 LibName35=w_device
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
 
