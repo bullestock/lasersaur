@@ -735,9 +735,6 @@ F 3 "" H 8700 6100 50  0000 C CNN
 	1    8500 6100
 	0    1    1    0   
 $EndComp
-NoConn ~ 5350 2600
-NoConn ~ 5350 2500
-NoConn ~ 5350 2400
 NoConn ~ 5350 2300
 $Comp
 L TEST_1P PWM1
@@ -3077,19 +3074,19 @@ STEP4
 Wire Wire Line
 	4700 12750 5150 12750
 Text GLabel 4700 13150 0    60   Input ~ 0
-P?
+P0.16
 Wire Wire Line
 	4700 13150 5150 13150
 Text GLabel 4700 13550 0    60   Input ~ 0
-P?
+P0.17
 Wire Wire Line
 	4700 13550 5150 13550
 Text GLabel 4700 13950 0    60   Input ~ 0
-P?
+P0.18
 Wire Wire Line
 	4700 13950 5150 13950
 Text GLabel 4700 14350 0    60   Input ~ 0
-P?
+P0.19
 Wire Wire Line
 	4700 14350 5150 14350
 Wire Wire Line
@@ -3848,7 +3845,6 @@ F 3 "" H 9450 5350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 5350 2100
-NoConn ~ 5350 2700
 NoConn ~ 5350 2900
 NoConn ~ 5350 1500
 NoConn ~ 8400 4300
@@ -3958,4 +3954,12 @@ F 3 "" H 4950 10000 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	4950 10000 4950 9900
+Text GLabel 5350 2400 0    39   Input ~ 0
+P0.16
+Text GLabel 5350 2500 0    39   Input ~ 0
+P0.17
+Text GLabel 5350 2600 0    39   Input ~ 0
+P0.18
+Text GLabel 5350 2700 0    39   Input ~ 0
+P0.19
 $EndSCHEMATC
