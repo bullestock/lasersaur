@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name lpcsaur)(type KiCad)(uri "$(KIPRJMOD)")(options "")(descr ""))
   (lib (name OPENHARDWARE)(type Legacy)(uri "$(KIPRJMOD)/OPENHARDWARE.mod")(options "")(descr ""))
+  (lib (name Connectors_JST)(type KiCad)(uri /home/torsten/sw/Connectors_JST.pretty)(options "")(descr ""))
 )
