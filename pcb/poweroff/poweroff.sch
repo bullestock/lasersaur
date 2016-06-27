@@ -49,7 +49,7 @@ U 1 1 572CE418
 P 5450 3700
 F 0 "R1" V 5530 3700 50  0000 C CNN
 F 1 "4K7" V 5450 3700 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5380 3700 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5380 3700 50  0001 C CNN
 F 3 "" H 5450 3700 50  0000 C CNN
 	1    5450 3700
 	1    0    0    -1  
@@ -60,7 +60,7 @@ U 1 1 572CE51A
 P 5200 4250
 F 0 "R2" V 5280 4250 50  0000 C CNN
 F 1 "100K" V 5200 4250 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 5130 4250 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 5130 4250 50  0001 C CNN
 F 3 "" H 5200 4250 50  0000 C CNN
 	1    5200 4250
 	0    1    1    0   
@@ -71,7 +71,7 @@ U 1 1 572CE57D
 P 4700 4250
 F 0 "R3" V 4780 4250 50  0000 C CNN
 F 1 "22K" V 4700 4250 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 4630 4250 50  0001 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4630 4250 50  0001 C CNN
 F 3 "" H 4700 4250 50  0000 C CNN
 	1    4700 4250
 	0    1    1    0   
@@ -82,7 +82,7 @@ U 1 1 572CE616
 P 4950 4400
 F 0 "C2" H 4975 4500 50  0000 L CNN
 F 1 "47u" H 4975 4300 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 4988 4250 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D5_L6_P2.5" H 4988 4250 50  0001 C CNN
 F 3 "" H 4950 4400 50  0000 C CNN
 	1    4950 4400
 	1    0    0    -1  
@@ -104,7 +104,7 @@ U 1 1 572D6095
 P 4900 3400
 F 0 "C1" H 4925 3500 50  0000 L CNN
 F 1 "100u" H 4925 3300 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Disc_D6_P5" H 4938 3250 50  0001 C CNN
+F 2 "Capacitors_ThroughHole:C_Radial_D5_L6_P2.5" H 4938 3250 50  0001 C CNN
 F 3 "" H 4900 3400 50  0000 C CNN
 	1    4900 3400
 	1    0    0    -1  
