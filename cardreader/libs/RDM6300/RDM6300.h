@@ -41,6 +41,9 @@ public:
             if (input > 9)
                 input -= 7;
             m_temp = (m_temp << 4) | input;
+#ifdef PROTOCOL_DEBUG
+            Serial.print("Store "); Serial.print(m_temp); Serial.print(" at "); Serial.println(m_index);
+#endif
             m_buf[m_index++] = m_temp;
             if (m_index > 5)
                 m_state = 3; 
@@ -90,5 +93,5 @@ private:
     int m_checksum;
     int m_temp;
     int m_index;
-    char m_buf[ID_SIZE];
+    unsigned char m_buf[ID_SIZE];
 };
