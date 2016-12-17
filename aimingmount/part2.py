@@ -12,10 +12,18 @@ from defs import *
 
 SEGMENTS = 16
 
-e = 0.0001
+e = 0.001
+
+def block():
+    w = 30
+    return translate([-4, -w/2, 0])(cube([10, w, 10]))
 
 def assembly():
-    return rotate([0, -90, 0])(base() + wall() + top() - rods() - screwhole() - recess() - mountholes())
+    nh = nuthole()
+    slider = block() - translate([-15, 0, -20])(rods()) - translate([-15, 0, -20])(screwhole()) - down(e)(nh)
+    bottom = down(30)(top())
+    b = rotate([90, 180, 180])(bottom + wall() + top() - rods() - screwhole() - recess() - mountholes())
+    return slider + translate([6-e, -25, 5])(b)
 
 if __name__ == '__main__':
     a = assembly()
