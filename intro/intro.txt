@@ -1,0 +1,43 @@
+CO2 laser: Bølgelængde, muligheder, begrænsninger
+  https://upload.wikimedia.org/wikipedia/commons/4/48/Commercial_laser_lines.svg
+- Effektivitet op til 20%
+
+Opbygning
+- Laser, HV, køling
+  10800 nm
+  rør.jpg, rør-closeup.jpg
+- Spejle: optik.jpg, combiner.jpg
+- Linse - fokusering: fokus.jpg
+- Air assist
+- Aiming laser
+- Mekanik - skub ikke!
+- Honey comb
+- Rengøring
+- Udsugning
+- Chiller
+- Kortlæser - adgang, logging
+- Raspi+Arduino
+- Interlocks
+
+Materialer
+- Gravering/skæring
+- Metaller kan ikke skæres, men kan markeres (kemisk reaktion)
+
+LasaurApp
+- Web
+- Home/pause/stop
+  - Reset ATMega
+- Move/jog/cut
+- Offset
+- Import
+  - Library jobs
+  - SVG dpi
+  - DXF - subset
+  - Coordinate display
+- Add to queue
+- Assign colours
+  - Max 8000 mm/min
+- Bounding box
+- Cut - altid under opsyn!
+
+Afslutning
