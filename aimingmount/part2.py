@@ -22,7 +22,7 @@ def assembly():
     nh = nuthole()
     slider = block() - translate([-15, 0, -20])(rods()) - translate([-15, 0, -20])(screwhole()) - down(e)(nh)
     bottom = down(30)(top())
-    b = rotate([90, 180, 180])(bottom + wall() + top() - rods() - screwhole() - recess() - mountholes())
+    b = rotate([90, 180, 180])(bottom + wall() + top() - up(10)(rods() + screwhole()) - mountholes())
     return slider + translate([6-e, -25, 5])(b)
 
 if __name__ == '__main__':
