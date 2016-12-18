@@ -15,7 +15,7 @@ SEGMENTS = 16
 e = 0.0001
 
 def assembly():
-    return rotate([0, -90, 0])(base() + wall() + top() - rods() - screwhole() - recess() - mountholes())
+    return rotate([0, -90, 0])(base() + wall() + top() - rods() - screwhole() - mountholes())
 
 if __name__ == '__main__':
     a = assembly()
