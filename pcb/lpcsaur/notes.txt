@@ -12,3 +12,9 @@ Buttons (check HAL)
 
 USB connector
 
+
+Paste stencil:
+- Set Solder paste clearance to -0.12 mm
+- Edit LPC + SOIC (?) in Inkscape
+- Cut at 8000/50%
+
