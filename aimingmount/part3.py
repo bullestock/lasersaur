@@ -73,7 +73,8 @@ def block():
 def assembly():
     nh = nuthole()
     slider = block() - translate([-15, 0, -20])(rods()) - translate([-15, 0, -20])(screwhole()) - down(e)(nh)
-    return translate([10, 12, -6-e])(rotate([90, 90, 0])(slider)) + translate([0, 0, 0])(mount())
+    support = translate([-13, -5, 7])(rotate([0, 45, 0])(cube([10, 20, 4])))
+    return translate([10, 12, -6-e])(rotate([90, 90, 0])(slider+support)) + translate([0, 0, 0])(mount())
 
 if __name__ == '__main__':
     a = assembly()
