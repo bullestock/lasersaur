@@ -133,9 +133,9 @@ def nutHole(size, units=MM, tolerance = +0.0001, proj = -1):
     radius = METRIC_NUT_AC_WIDTHS[size]/2+tolerance
     height = METRIC_NUT_THICKNESS[size]+tolerance
     if proj == -1:
-	return cylinder(r= radius, h=height, center=[0,0])
+	return cylinder(r = radius, h=height, segments = 6, center=[0,0])
     if proj == 1:
-	return circle(r= radius)
+	return circle(r = radius, segments = 6)
     if proj == 2:
 	return translate([-radius/2, 0])(square([radius*2, height]))
 
