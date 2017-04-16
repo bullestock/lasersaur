@@ -6,7 +6,7 @@ Opbygning
 - Laser, HV, køling
   10800 nm
   rør.jpg, rør-closeup.jpg
-- Spejle: optik.jpg, combiner.jpg
+- Spejle: mirrors.png, optik.jpg, combiner.jpg
 - Linse - fokusering: fokus.jpg
 - Air assist
 - Aiming laser
@@ -20,6 +20,7 @@ Opbygning
 - Interlocks
 
 Materialer
+- Aldrig PVC!
 - Gravering/skæring
 - Metaller kan ikke skæres, men kan markeres (kemisk reaktion)
 
