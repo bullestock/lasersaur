@@ -1,11 +1,11 @@
 EESchema Schematic File Version 2
-LIBS:74xx
-LIBS:max485
-LIBS:power
-LIBS:mechanical
-LIBS:device
-LIBS:conn
 LIBS:lm1117
+LIBS:max485
+LIBS:conn
+LIBS:device
+LIBS:mechanical
+LIBS:power
+LIBS:dsnmini360
 LIBS:lasersaurv2-cache
 EELAYER 25 0
 EELAYER END

@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name dsn-mini-360)(type KiCad)(uri "$(KIPRJMOD)/dsn-mini-360.pretty")(options "")(descr ""))
+)
