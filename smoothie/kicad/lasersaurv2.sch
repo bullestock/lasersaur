@@ -142,11 +142,11 @@ F 3 "" H 8550 4650 50  0000 C CNN
 	1    8550 4650
 	1    0    0    -1  
 $EndComp
-Text GLabel 3000 4250 1    60   Input ~ 0
+Text GLabel 4050 4300 1    60   Input ~ 0
 P2.11
-Text GLabel 3150 4250 1    60   Input ~ 0
+Text GLabel 4250 4300 1    60   Input ~ 0
 P2.12
-Text GLabel 3600 2700 1    60   Input ~ 0
+Text GLabel 4100 2700 1    60   Input ~ 0
 P4.28
 $Comp
 L GND #PWR05
@@ -348,8 +348,6 @@ F 3 "" H 7200 3200 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	2650 4650 3650 4650
-Connection ~ 3000 4650
-Connection ~ 3150 4550
 Wire Wire Line
 	4950 3450 5500 3450
 Wire Wire Line
@@ -441,8 +439,6 @@ F 3 "" H 3850 2950 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	3150 2950 3700 2950
-Wire Wire Line
-	3600 2900 3600 3000
 Connection ~ 3600 2950
 $Comp
 L +5V #PWR014
@@ -531,10 +527,6 @@ Wire Wire Line
 Wire Wire Line
 	2400 5350 2400 5150
 Wire Wire Line
-	3150 4250 3150 4550
-Wire Wire Line
-	3000 4250 3000 4650
-Wire Wire Line
 	2650 5350 2650 4650
 Connection ~ 2400 5350
 Wire Wire Line
@@ -584,8 +576,6 @@ Wire Wire Line
 Wire Wire Line
 	3600 3300 3600 3400
 Wire Wire Line
-	3600 2950 3600 2700
-Wire Wire Line
 	3600 3350 4100 3350
 Wire Wire Line
 	4100 3350 4100 3300
@@ -595,7 +585,7 @@ Wire Wire Line
 Wire Wire Line
 	4950 2950 4950 3450
 Wire Wire Line
-	4100 2950 4100 3000
+	4100 2700 4100 3000
 Connection ~ 4100 2950
 $Comp
 L 7411 IC1
@@ -937,4 +927,12 @@ F 3 "" H 2250 1150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	2250 1150 2250 1000
+Wire Wire Line
+	3600 2950 3600 3000
+Wire Wire Line
+	4050 4300 4050 4650
+Connection ~ 4050 4650
+Wire Wire Line
+	4250 4300 4250 4550
+Connection ~ 4250 4550
 $EndSCHEMATC

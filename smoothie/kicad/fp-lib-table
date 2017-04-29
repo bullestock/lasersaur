@@ -1,3 +1,5 @@
 (fp_lib_table
   (lib (name dsn-mini-360)(type KiCad)(uri "$(KIPRJMOD)/dsn-mini-360.pretty")(options "")(descr ""))
+  (lib (name OPENHARDWARE)(type Legacy)(uri "$(KIPRJMOD)/OPENHARDWARE.mod")(options "")(descr ""))
+  (lib (name OHW_BACK)(type Legacy)(uri "$(KIPRJMOD)/OHW_BACK.mod")(options "")(descr ""))
 )
