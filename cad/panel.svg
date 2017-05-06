@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1220mm"
+   height="610mm"
+   viewBox="0 0 4322.8346 2161.4173"
+   id="svg8254"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="panel.svg">
+  <defs
+     id="defs8256" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.93949959"
+     inkscape:cx="351.765"
+     inkscape:cy="1853.0637"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="847"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata8259">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,1109.0551)">
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.53818357;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5865"
+       width="708.12323"
+       height="460.09174"
+       x="0.26909178"
+       y="-1108.786" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40.24435425px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="39.190105"
+       y="-723.84241"
+       id="text5867"
+       sodipodi:linespacing="125%"
+       transform="scale(1.2517447,0.79888496)"><tspan
+         sodipodi:role="line"
+         id="tspan5869"
+         x="39.190105"
+         y="-723.84241">MÅL ER IKKE ENDELIGE!</tspan></text>
+    <g
+       id="g5877"
+       transform="translate(484.91028,15.871207)">
+      <circle
+         r="28.102949"
+         cy="-1001.3527"
+         cx="109.06342"
+         id="path5871"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.48701698;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5873"
+         y="-996.60089"
+         x="85.151711"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="-996.60089"
+           x="85.151711"
+           id="tspan5875"
+           sodipodi:role="line">Chiller</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="132.34491"
+       y="-983.66528"
+       id="text5882"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5884"
+         x="132.34491"
+         y="-983.66528">Ethernet</tspan></text>
+    <g
+       id="g5892"
+       transform="translate(-105.37525,62.799389)">
+      <circle
+         r="40.598782"
+         cy="-790.23187"
+         cx="189.58464"
+         id="path5886"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.29849803;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5888"
+         y="-784.10797"
+         x="167.91705"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="-784.10797"
+           x="167.91705"
+           id="tspan5890"
+           sodipodi:role="line">Vand</tspan></text>
+    </g>
+    <g
+       transform="translate(19.037059,60.794481)"
+       id="g5892-5">
+      <circle
+         r="40.598782"
+         cy="-790.23187"
+         cx="189.58464"
+         id="path5886-6"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.29849803;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5888-2"
+         y="-784.10797"
+         x="167.91705"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="-784.10797"
+           x="167.91705"
+           id="tspan5890-9"
+           sodipodi:role="line">Vand</tspan></text>
+    </g>
+    <g
+       id="g5927"
+       transform="translate(183.07618,206.49291)">
+      <circle
+         r="24.433058"
+         cy="-935.01141"
+         cx="171.51268"
+         id="path5921"
+         style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.74018395;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <text
+         sodipodi:linespacing="125%"
+         id="text5923"
+         y="-929.54395"
+         x="157.53069"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="-929.54395"
+           x="157.53069"
+           id="tspan5925"
+           sodipodi:role="line">Luft</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="565.19452"
+       y="-729.43738"
+       id="text5932"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5934"
+         x="565.19452"
+         y="-729.43738">Power</tspan></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#ebbeff;stroke-width:3.055;stroke-miterlimit:4;stroke-dasharray:18.33,18.33;stroke-opacity:1;stroke-dashoffset:0"
+       id="rect5936"
+       width="658.70056"
+       height="410.66907"
+       x="24.980431"
+       y="-1084.0747" />
+  </g>
+</svg>
