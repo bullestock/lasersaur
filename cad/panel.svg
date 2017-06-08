@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2480152"
-     inkscape:cx="236.14305"
-     inkscape:cy="1894.1931"
+     inkscape:zoom="1"
+     inkscape:cx="119.49976"
+     inkscape:cy="1928.3234"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -94,47 +94,44 @@
          x="109.48934"
          y="-1026.1113">Ethernet</tspan></text>
     <g
-       style="stroke:#ff0000;stroke-opacity:1"
+       style="stroke:#00ff00;stroke-opacity:1"
        id="g5892"
-       transform="matrix(1.0869492,0,0,1.08712,-115.71484,116.7474)">
+       transform="matrix(1.1304338,0,0,1.1303552,-97.383785,137.98029)">
       <text
          sodipodi:linespacing="125%"
          id="text5888"
          y="-784.41998"
          x="168.9236"
-         style="font-style:normal;font-weight:normal;font-size:14.16305637px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;font-size:14.16305637px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="-784.41998"
            x="168.9236"
-           id="tspan5890"
-           sodipodi:role="line">Vand, </tspan><tspan
-           y="-766.71619"
-           x="168.9236"
            sodipodi:role="line"
-           id="tspan5601">Ø23</tspan></text>
-      <circle
-         r="40.598782"
-         cy="-790.23187"
-         cx="189.58464"
+           id="tspan5601">Vand</tspan></text>
+      <ellipse
+         cy="-775.34497"
+         cx="174.69595"
          id="path5886"
-         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.29849803;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.18943819;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         rx="25.764631"
+         ry="25.76643" />
     </g>
     <g
-       style="stroke:#ff0000;stroke-opacity:1"
-       transform="matrix(1.0869492,0,0,1.08712,8.3009061,116.7474)"
+       style="stroke:#00ff00;stroke-opacity:1"
+       transform="matrix(0.71727768,0,0,0.71678171,70.41303,-172.01118)"
        id="g5892-5">
       <circle
          r="40.598782"
          cy="-790.23187"
          cx="189.58464"
          id="path5886-6"
-         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.29849803;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.29849803;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <text
          sodipodi:linespacing="125%"
          id="text5888-2"
          y="-784.10797"
          x="167.91705"
-         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="-784.10797"
            x="167.91705"
@@ -143,7 +140,7 @@
     </g>
     <g
        id="g5927"
-       transform="translate(183.07618,196.57648)"
+       transform="translate(207.62118,196.57648)"
        style="stroke:#ff0000;stroke-opacity:1">
       <circle
          r="24.433058"
