@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1"
-     inkscape:cx="119.49976"
-     inkscape:cy="1928.3234"
+     inkscape:zoom="1.4393333"
+     inkscape:cx="354.33071"
+     inkscape:cy="1931.1024"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -94,7 +94,7 @@
          x="109.48934"
          y="-1026.1113">Ethernet</tspan></text>
     <g
-       style="stroke:#00ff00;stroke-opacity:1"
+       style="stroke:#ff0000;stroke-opacity:1"
        id="g5892"
        transform="matrix(1.1304338,0,0,1.1303552,-97.383785,137.98029)">
       <text
@@ -102,7 +102,7 @@
          id="text5888"
          y="-784.41998"
          x="168.9236"
-         style="font-style:normal;font-weight:normal;font-size:14.16305637px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;font-size:14.16305637px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="-784.41998"
            x="168.9236"
@@ -112,12 +112,12 @@
          cy="-775.34497"
          cx="174.69595"
          id="path5886"
-         style="fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.18943819;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.18943819;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          rx="25.764631"
          ry="25.76643" />
     </g>
     <g
-       style="stroke:#00ff00;stroke-opacity:1"
+       style="stroke:#ff0000;stroke-opacity:1"
        transform="matrix(0.71727768,0,0,0.71678171,70.41303,-172.01118)"
        id="g5892-5">
       <circle
@@ -125,13 +125,13 @@
          cy="-790.23187"
          cx="189.58464"
          id="path5886-6"
-         style="fill:none;fill-opacity:1;stroke:#00ff00;stroke-width:0.29849803;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+         style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.29849803;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
       <text
          sodipodi:linespacing="125%"
          id="text5888-2"
          y="-784.10797"
          x="167.91705"
-         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#00ff00;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         style="font-style:normal;font-weight:normal;font-size:15px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
          xml:space="preserve"><tspan
            y="-784.10797"
            x="167.91705"
@@ -198,12 +198,24 @@
        x="118.42152"
        y="-1009.5881" />
     <rect
-       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.35433072;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.3475484;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4795"
-       width="93.897629"
-       height="74.409439"
-       x="547.0249"
-       y="-775.63965"
-       ry="0" />
+       width="95.321747"
+       height="70.518593"
+       x="531.66986"
+       y="-772.26715"
+       ry="8.0115423" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.35433071;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4161"
+       cx="510.23621"
+       cy="-737.00787"
+       r="5.2451649" />
+    <circle
+       style="fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:0.35433071;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="path4161-3"
+       cx="647.53937"
+       cy="-737.00787"
+       r="5.2451649" />
   </g>
 </svg>
