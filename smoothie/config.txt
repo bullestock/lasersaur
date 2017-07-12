@@ -1,0 +1,197 @@
+# Smoothieware configuration file, see http://smoothieware.org/configuring-smoothie
+# NOTE Lines must not exceed 132 characters, and '#' characters mean what follows is ignored
+## Robot module configurations : general handling of movement G-codes and slicing into moves
+
+# Basic motion configuration
+default_feed_rate                            1500             # Default speed (mm/minute) for G1/G2/G3 moves
+default_seek_rate                            4000             # Default speed (mm/minute) for G0 moves
+mm_per_arc_segment                           0.0              # Fixed length for line segments that divide arcs, 0 to disable
+#mm_per_line_segment                         5                # Cut lines into segments this size
+mm_max_arc_error                             0.01             # The maximum error for line segments that divide arcs 0 to disable
+                                                              # note it is invalid for both the above be 0
+                                                              # if both are used, will use largest segment length based on radius
+
+# Arm solution configuration : Cartesian robot. Translates mm positions into stepper positions
+# See http://smoothieware.org/stepper-motors
+alpha_steps_per_mm                           214.190          # Steps per mm for alpha ( X ) stepper
+beta_steps_per_mm                            219.058          # Steps per mm for beta ( Y ) stepper
+gamma_steps_per_mm                           1600             # Steps per mm for gamma ( Z ) stepper
+
+# Planner module configuration : Look-ahead and acceleration configuration
+# See http://smoothieware.org/motion-control
+acceleration                                 3000             # Acceleration in mm/second/second.
+#z_acceleration                              500              # Acceleration for Z only moves in mm/s^2, 0 uses acceleration which is the default. DO NOT SET ON A DELTA
+junction_deviation                           0.05             # See http://smoothieware.org/motion-control#junction-deviation
+#z_junction_deviation                        0.0              # For Z only moves, -1 uses junction_deviation, zero disables junction_deviation on z moves DO NOT SET ON A DELTA
+
+# Cartesian axis speed limits
+x_axis_max_speed                             8000            # Maximum speed in mm/min
+y_axis_max_speed                             8000            # Maximum speed in mm/min
+z_axis_max_speed                             300              # Maximum speed in mm/min
+
+# Stepper module configuration 
+# Pins are defined as  ports, and pin numbers, appending "!" to the number will invert a pin
+# See http://smoothieware.org/pin-configuration and http://smoothieware.org/pinout
+alpha_step_pin                               2.0              # Pin for alpha stepper step signal
+alpha_dir_pin                                0.5              # Pin for alpha stepper direction, add '!' to reverse direction
+alpha_en_pin                                 0.4              # Pin for alpha enable pin
+alpha_current                                1.7              # X stepper motor current
+alpha_max_rate                               30000.0          # Maximum rate in mm/min
+
+beta_step_pin                                2.1              # Pin for beta stepper step signal
+beta_dir_pin                                 0.11             # Pin for beta stepper direction, add '!' to reverse direction
+beta_en_pin                                  0.10             # Pin for beta enable
+beta_current                                 2.0              # Y stepper motor current
+beta_max_rate                                30000.0          # Maxmimum rate in mm/min
+
+gamma_step_pin                               2.2              # Pin for gamma stepper step signal
+gamma_dir_pin                                0.20             # Pin for gamma stepper direction, add '!' to reverse direction
+gamma_en_pin                                 0.19             # Pin for gamma enable
+gamma_current                                1.5              # Z stepper motor current
+gamma_max_rate                               300.0            # Maximum rate in mm/min
+
+## Extruder module configuration
+# See http://smoothieware.org/extruder
+extruder.hotend.enable                       false          # Whether to activate the extruder module at all. All configuration is ignored if false
+
+## Laser module configuration
+# See http://smoothieware.org/laser
+laser_module_enable                           true            # Whether to activate the laser module at all
+laser_module_pwm_pin                          1.23            # This pin will be PWMed to control the laser. 
+                                                              # Only pins 2.0, 2.1, 2.2, 2.3, 2.4, 2.5, 1.18, 1.20, 1.21, 1.23, 1.24, 1.26, 3.25 and 3.26
+                                                              # can be used since laser requires hardware PWM, see http://smoothieware.org/pinout
+#laser_module_ttl_pin 	                      1.30            # This pin turns on when the laser turns on, and off when the laser turns off.
+#laser_module_maximum_power                   1.0             # This is the maximum duty cycle that will be applied to the laser
+#laser_module_minimum_power                   0.0             # This is a value just below the minimum duty cycle that keeps the laser
+                                                              # active without actually burning.
+#laser_module_default_power                   0.8             # This is the default laser power that will be used for cuts if a power has not been specified.  The value is a scale between
+                                                              # the maximum and minimum power levels specified above
+#laser_module_pwm_period                      20              # This sets the pwm frequency as the period in microseconds
+
+## Temperature control configuration
+# See http://smoothieware.org/temperaturecontrol
+
+# First hotend configuration
+temperature_control.hotend.enable            false             # Whether to activate this ( "hotend" ) module at all.
+
+temperature_control.bed.enable               false             # Whether to activate this ( "hotend" ) module at all.
+
+## Switch modules
+# See http://smoothieware.org/switch
+
+# Switch module for fan control
+switch.fan.enable                            true             # Enable this module
+switch.fan.input_on_command                  M106             # Command that will turn this switch on
+switch.fan.input_off_command                 M107             # Command that will turn this switch off
+switch.fan.output_pin                        2.6              # Pin this module controls
+switch.fan.output_type                       digital
+
+switch.airassist.enable                      true             # Enable this module
+switch.airassist.input_on_command            M42              # Command that will turn this switch on
+switch.airassist.input_off_command           M43              # Command that will turn this switch off
+switch.airassist.output_pin                  0.15             # Pin this module controls
+switch.airassist.output_type                 digital          # Digital means this is just an on or off pin
+
+switch.poweroff.enable                       true             # Enable this module
+switch.poweroff.input_on_command             M40              # Command that will turn this switch on
+switch.poweroff.input_off_command            M41              # Command that will turn this switch off
+switch.poweroff.output_pin                   0.17             # Pin this module controls
+switch.poweroff.output_type                  digital          # Digital means this is just an on or off pin
+
+switch.door1.enable                          true
+switch.door1.input_pin                       2.11
+switch.door1.output_on_command               abort
+switch.door1.output_off_command              resume
+
+switch.door2.enable                          true
+switch.door2.input_pin                       2.12
+switch.door2.output_on_command               abort
+switch.door2.output_off_command              resume
+
+## Endstops
+# See http://smoothieware.org/endstops
+endstops_enable                              true             # The endstop module is enabled by default and can be disabled here
+alpha_min_endstop                            1.24^            # Pin to read min endstop, add a ! to invert if endstop is NO connected to ground
+alpha_max_endstop                            1.25^            # Pin to read max endstop, uncomment this and comment the above if using max endstops
+alpha_homing_direction                       home_to_min      # Or set to home_to_max and set alpha_max and uncomment the alpha_max_endstop
+alpha_min                                    0                # This gets loaded as the current position after homing when home_to_min is set
+alpha_max                                    1220             # This gets loaded as the current position after homing when home_to_max is set
+beta_min_endstop                             1.26^            # Pin to read min endstop, add a ! to invert if endstop is NO connected to ground
+beta_max_endstop                             1.27^            # Pin to read max endstop, uncomment this and comment the above if using max endstops
+beta_homing_direction                        home_to_min      # Or set to home_to_max and set alpha_max and uncomment the alpha_max_endstop
+beta_min                                     0                # This gets loaded as the current position after homing when home_to_min is set
+beta_max                                     610              # This gets loaded as the current position after homing when home_to_max is set
+gamma_min_endstop                            nc               # Pin to read min endstop, add a ! to invert if endstop is NO connected to ground
+#gamma_max_endstop                           1.29^            # Pin to read max endstop, uncomment this and comment the above if using max endstops
+gamma_homing_direction                       home_to_min      # Or set to home_to_max and set alpha_max and uncomment the alpha_max_endstop
+gamma_min                                    0                # This gets loaded as the current position after homing when home_to_min is set
+gamma_max                                    200              # This gets loaded as the current position after homing when home_to_max is set
+
+alpha_max_travel                             1220             # Max travel in mm for alpha/X axis when homing
+beta_max_travel                              610              # Max travel in mm for beta/Y axis when homing
+gamma_max_travel                             500              # Max travel in mm for gamma/Z axis when homing
+
+# Optional enable limit switches, actions will stop if any enabled limit switch is triggered
+alpha_limit_enable                           true            # Set to true to enable X min and max limit switches
+beta_limit_enable                            true            # Set to true to enable Y min and max limit switches
+gamma_limit_enable                           true            # Set to true to enable Z min and max limit switches
+
+# Endstops home at their fast feedrate first, then once the endstop is found they home again at their slow feedrate for accuracy
+alpha_fast_homing_rate_mm_s                  50               # Alpha/X fast homing feedrate in mm/second
+alpha_slow_homing_rate_mm_s                  25               # Alpha/X slow homing feedrate in mm/second
+beta_fast_homing_rate_mm_s                   50               # Beta/Y  fast homing feedrate in mm/second
+beta_slow_homing_rate_mm_s                   25               # Beta/Y  slow homing feedrate in mm/second
+gamma_fast_homing_rate_mm_s                  4                # Gamma/Z fast homing feedrate in mm/second
+gamma_slow_homing_rate_mm_s                  2                # Gamma/Z slow homing feedrate in mm/second
+
+alpha_homing_retract_mm                      5                # Distance to retract from the endstop after it is hit for alpha/X
+beta_homing_retract_mm                       5                # Distance to retract from the endstop after it is hit for beta/Y
+gamma_homing_retract_mm                      1                # Distance to retract from the endstop after it is hit for gamma/Z
+
+# Optional order in which axis will home, default is they all home at the same time,
+# If this is set it will force each axis to home one at a time in the specified order
+#homing_order                                 XYZ              # X axis followed by Y then Z last
+#move_to_origin_after_home                    false            # Move XY to 0,0 after homing
+#endstop_debounce_count                       100              # Uncomment if you get noise on your endstops, default is 100
+#endstop_debounce_ms                          1                # Uncomment if you get noise on your endstops, default is 1 millisecond debounce
+
+## Z-probe
+# See http://smoothieware.org/zprobe
+zprobe.enable                                false           # Set to true to enable a zprobe
+
+## Panel
+# See http://smoothieware.org/panel
+# Please find your panel on the wiki and copy/paste the right configuration here
+panel.enable                                 false             # Set to true to enable the panel code
+
+## Network settings
+# See http://smoothieware.org/network
+network.enable                               true             # Enable the ethernet network services
+network.webserver.enable                     true             # Enable the webserver
+network.telnet.enable                        true             # Enable the telnet server
+network.ip_address                           auto             # Use dhcp to get ip address
+# Uncomment the 3 below to manually setup ip address
+#network.ip_address                           192.168.3.222   # The IP address
+#network.ip_mask                              255.255.255.0   # The ip mask
+#network.ip_gateway                           192.168.3.1     # The gateway address
+
+## System configuration
+# Serial communications configuration (baud rate defaults to 9600 if undefined)
+# For communication over the UART port, *not* the USB/Serial port
+uart0.baud_rate                              115200           # Baud rate for the default hardware (UART) serial port
+
+second_usb_serial_enable                     false            # This enables a second USB serial port
+#leds_disable                                true             # Disable using leds after config loaded
+#play_led_disable                            true             # Disable the play led
+
+# Kill button maybe assigned to a different pin, set to the onboard pin by default
+# See http://smoothieware.org/killbutton
+kill_button_enable                           true             # Set to true to enable a kill button
+kill_button_pin                              2.12             # Kill button pin. default is same as pause button 2.12 (2.11 is another good choice)
+
+#msd_disable                                 false            # Disable the MSD (USB SDCARD), see http://smoothieware.org/troubleshooting#disable-msd
+#dfu_enable                                  false            # For linux developers, set to true to enable DFU
+
+# Only needed on a smoothieboard
+# See http://smoothieware.org/currentcontrol
+currentcontrol_module_enable                 true             # Control stepper motor current via the configuration file
