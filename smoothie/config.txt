@@ -99,12 +99,12 @@ switch.poweroff.output_pin                   0.17             # Pin this module 
 switch.poweroff.output_type                  digital          # Digital means this is just an on or off pin
 
 switch.door1.enable                          true
-switch.door1.input_pin                       2.11
+switch.door1.input_pin                       2.11-
 switch.door1.output_on_command               abort
 switch.door1.output_off_command              resume
 
 switch.door2.enable                          true
-switch.door2.input_pin                       2.12
+switch.door2.input_pin                       2.12-
 switch.door2.output_on_command               abort
 switch.door2.output_off_command              resume
 
@@ -156,24 +156,13 @@ gamma_homing_retract_mm                      1                # Distance to retr
 #endstop_debounce_ms                          1                # Uncomment if you get noise on your endstops, default is 1 millisecond debounce
 
 ## Z-probe
-# See http://smoothieware.org/zprobe
-zprobe.enable                                false           # Set to true to enable a zprobe
+zprobe.enable                                false
 
 ## Panel
-# See http://smoothieware.org/panel
-# Please find your panel on the wiki and copy/paste the right configuration here
 panel.enable                                 false             # Set to true to enable the panel code
 
 ## Network settings
-# See http://smoothieware.org/network
-network.enable                               true             # Enable the ethernet network services
-network.webserver.enable                     true             # Enable the webserver
-network.telnet.enable                        true             # Enable the telnet server
-network.ip_address                           auto             # Use dhcp to get ip address
-# Uncomment the 3 below to manually setup ip address
-#network.ip_address                           192.168.3.222   # The IP address
-#network.ip_mask                              255.255.255.0   # The ip mask
-#network.ip_gateway                           192.168.3.1     # The gateway address
+network.enable                               false
 
 ## System configuration
 # Serial communications configuration (baud rate defaults to 9600 if undefined)
@@ -186,8 +175,8 @@ second_usb_serial_enable                     false            # This enables a s
 
 # Kill button maybe assigned to a different pin, set to the onboard pin by default
 # See http://smoothieware.org/killbutton
-kill_button_enable                           true             # Set to true to enable a kill button
-kill_button_pin                              2.12             # Kill button pin. default is same as pause button 2.12 (2.11 is another good choice)
+#kill_button_enable                           true             # Set to true to enable a kill button
+#kill_button_pin                              4.28             # Chiller OK
 
 #msd_disable                                 false            # Disable the MSD (USB SDCARD), see http://smoothieware.org/troubleshooting#disable-msd
 #dfu_enable                                  false            # For linux developers, set to true to enable DFU
@@ -195,3 +184,12 @@ kill_button_pin                              2.12             # Kill button pin.
 # Only needed on a smoothieboard
 # See http://smoothieware.org/currentcontrol
 currentcontrol_module_enable                 true             # Control stepper motor current via the configuration file
+
+switch.chiller.enable                        true
+switch.chiller.input_pin                     4.28-
+switch.chiller.output_on_command             abort
+switch.chiller.output_off_command            resume
+
+haltpin.enable                               true
+haltpin.pin                                  1.22
+
