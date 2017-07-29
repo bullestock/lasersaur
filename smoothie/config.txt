@@ -190,6 +190,10 @@ switch.chiller.input_pin                     4.28-
 switch.chiller.output_on_command             abort
 switch.chiller.output_off_command            resume
 
-haltpin.enable                               true
-haltpin.pin                                  1.22
-
+# For now, just set 'limits OK' high always
+switch.halt.enable                            true
+switch.halt.input_on_command                  M700
+switch.halt.input_off_command                 M701
+switch.halt.output_pin                        1.22
+switch.halt.output_type                       digital
+switch.halt.startup_state                     true
