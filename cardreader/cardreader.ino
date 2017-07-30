@@ -14,7 +14,7 @@ SoftwareSerial swSerial(PIN_RX, PIN_TX);
 
 void setup()
 {
-    Serial.begin(57600);
+    Serial.begin(115200);
     Serial.println("Cardreader v 0.1");
     swSerial.begin(9600);
 }
