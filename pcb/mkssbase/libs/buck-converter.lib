@@ -1,0 +1,20 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# buck-converter
+#
+DEF buck-converter U 0 40 Y Y 1 F N
+F0 "U" 0 350 50 H V C CNN
+F1 "buck-converter" 0 250 50 H V C CNN
+F2 "mylib:buck-converter" 0 -250 50 H I C CNN
+F3 "" 0 250 50 H I C CNN
+DRAW
+S -250 150 300 -200 0 1 0 N
+X IN+ 1 -350 50 100 R 50 50 1 1 I
+X IN- 2 -350 -100 100 R 50 50 1 1 I
+X OUT+ 3 400 50 100 L 50 50 1 1 O
+X OUT- 4 400 -100 100 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+#End Library
