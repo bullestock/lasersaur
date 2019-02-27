@@ -1,5 +1,5 @@
 (sym_lib_table
-  (lib (name mkssbase-rescue)(type Legacy)(uri ${KIPRJMOD}/mkssbase-rescue.lib)(options "")(descr ""))
+  (lib (name mkssbase-rescue)(type Legacy)(uri ${KIPRJMOD}/mkssbase-rescue.lib)(options "")(descr "")(disabled))
   (lib (name 74xx_IEEE)(type Legacy)(uri ${KIPRJMOD}/libs/74xx_IEEE.lib)(options "")(descr ""))
   (lib (name Regulator_Linear)(type Legacy)(uri ${KIPRJMOD}/libs/Regulator_Linear.lib)(options "")(descr ""))
   (lib (name Transistor_FET)(type Legacy)(uri ${KIPRJMOD}/libs/Transistor_FET.lib)(options "")(descr ""))
@@ -9,4 +9,6 @@
   (lib (name Connector_Generic)(type Legacy)(uri ${KIPRJMOD}/libs/Connector_Generic.lib)(options "")(descr ""))
   (lib (name buck-converter)(type Legacy)(uri ${KIPRJMOD}/libs/buck-converter.lib)(options "")(descr ""))
   (lib (name Interface_UART)(type Legacy)(uri ${KIPRJMOD}/libs/Interface_UART.lib)(options "")(descr ""))
+  (lib (name 4xxx)(type Legacy)(uri ${KIPRJMOD}/libs/4xxx.lib)(options "")(descr ""))
+  (lib (name Transistor_BJT)(type Legacy)(uri ${KIPRJMOD}/libs/Transistor_BJT.lib)(options "")(descr ""))
 )

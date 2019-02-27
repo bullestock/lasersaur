@@ -1,10 +1,11 @@
 EESchema Schematic File Version 4
 LIBS:mkssbase-cache
+LIBS:chillercontrol-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 2
+Sheet 2 3
 Title ""
 Date ""
 Rev ""
@@ -283,7 +284,7 @@ P 7600 3500
 AR Path="/58F4BA9B" Ref="J12"  Part="1" 
 AR Path="/58F3B713/58F4BA9B" Ref="J12"  Part="1" 
 F 0 "J12" H 7600 3650 50  0000 C CNN
-F 1 "LED LIGHTING" V 7700 3500 50  0000 C CNN
+F 1 "LED LIGHTING" H 7750 3250 50  0000 C CNN
 F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 7600 3500 50  0001 C CNN
 F 3 "" H 7600 3500 50  0001 C CNN
 	1    7600 3500
@@ -340,7 +341,7 @@ P 7600 4150
 AR Path="/58F4BF09" Ref="J13"  Part="1" 
 AR Path="/58F3B713/58F4BF09" Ref="J13"  Part="1" 
 F 0 "J13" H 7600 4300 50  0000 C CNN
-F 1 "AIR VALVE" V 7700 4150 50  0000 C CNN
+F 1 "AIR VALVE" H 7900 4050 50  0000 C CNN
 F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 7600 4150 50  0001 C CNN
 F 3 "" H 7600 4150 50  0001 C CNN
 	1    7600 4150
@@ -591,4 +592,43 @@ F 3 "" H 6300 3800 50  0001 C CNN
 	1    6300 3550
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J15
+U 1 1 5C57EF6D
+P 8300 2900
+F 0 "J15" H 8380 2892 50  0000 L CNN
+F 1 "CHILLER POWER" H 8380 2801 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 8300 2900 50  0001 C CNN
+F 3 "~" H 8300 2900 50  0001 C CNN
+	1    8300 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J16
+U 1 1 5C57EFEC
+P 8300 3250
+F 0 "J16" H 8379 3242 50  0000 L CNN
+F 1 "CHILLER SSR" H 8379 3151 50  0000 L CNN
+F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 8300 3250 50  0001 C CNN
+F 3 "~" H 8300 3250 50  0001 C CNN
+	1    8300 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 2900 7150 2900
+Wire Wire Line
+	7150 2900 7150 3500
+Wire Wire Line
+	8100 3000 8050 3000
+Wire Wire Line
+	8050 3000 8050 3250
+Wire Wire Line
+	8050 3250 8100 3250
+Wire Wire Line
+	7350 3950 8050 3950
+Wire Wire Line
+	8050 3950 8050 3350
+Wire Wire Line
+	8050 3350 8100 3350
+Connection ~ 7350 3950
 $EndSCHEMATC

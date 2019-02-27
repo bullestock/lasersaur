@@ -1,10 +1,11 @@
 EESchema Schematic File Version 4
 LIBS:mkssbase-cache
+LIBS:chillercontrol-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 2
+Sheet 1 3
 Title ""
 Date ""
 Rev ""
@@ -107,7 +108,7 @@ L Device:LED LED1
 U 1 1 58F2E5D6
 P 8550 4400
 F 0 "LED1" H 8550 4500 50  0000 C CNN
-F 1 "Disable" H 8550 4300 50  0000 C CNN
+F 1 "Enable" V 8500 4100 50  0000 C CNN
 F 2 "LED_SMD:LED_0603_1608Metric" H 8550 4400 50  0001 C CNN
 F 3 "" H 8550 4400 50  0000 C CNN
 	1    8550 4400
@@ -1030,4 +1031,10 @@ F 3 "~" H 2250 1000 50  0001 C CNN
 	1    2250 1000
 	1    0    0    -1  
 $EndComp
+$Sheet
+S 850  6850 1550 500 
+U 5C787D7D
+F0 "chillercontrol" 60
+F1 "chillercontrol.sch" 60
+$EndSheet
 $EndSCHEMATC
