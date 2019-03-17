@@ -978,8 +978,6 @@ F 3 "http://www.ti.com/lit/gpn/sn74LS11" H 1050 2850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 2350 1050 2350
-Wire Wire Line
 	1050 3350 1050 3400
 Wire Wire Line
 	1050 3400 1750 3400
@@ -991,7 +989,6 @@ Wire Wire Line
 	5350 2750 5800 2750
 Wire Wire Line
 	1750 3400 2450 3400
-Connection ~ 1050 2350
 Wire Wire Line
 	600  3000 600  3400
 Wire Wire Line
@@ -1036,4 +1033,18 @@ U 5C787D7D
 F0 "chillercontrol" 60
 F1 "chillercontrol.sch" 60
 $EndSheet
+$Comp
+L power:+3V3 #PWR?
+U 1 1 5C8E6364
+P 1050 2250
+F 0 "#PWR?" H 1050 2100 50  0001 C CNN
+F 1 "+3V3" H 1065 2423 50  0000 C CNN
+F 2 "" H 1050 2250 50  0001 C CNN
+F 3 "" H 1050 2250 50  0001 C CNN
+	1    1050 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 2250 1050 2350
+Connection ~ 1050 2350
 $EndSCHEMATC
