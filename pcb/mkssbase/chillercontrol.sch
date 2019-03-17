@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
 LIBS:mkssbase-cache
-LIBS:chillercontrol-cache
 EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
@@ -15,28 +14,6 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-$Comp
-L Connector_Generic:Conn_01x02 J19
-U 1 1 5C59E722
-P 1900 6950
-F 0 "J19" H 1820 7167 50  0000 C CNN
-F 1 "PWR OUT" H 2200 6900 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 1900 6950 50  0001 C CNN
-F 3 "~" H 1900 6950 50  0001 C CNN
-	1    1900 6950
-	-1   0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J18
-U 1 1 5C59E800
-P 1900 6350
-F 0 "J18" H 1820 6567 50  0000 C CNN
-F 1 "PWR IN" H 2250 6300 50  0000 C CNN
-F 2 "Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical" H 1900 6350 50  0001 C CNN
-F 3 "~" H 1900 6350 50  0001 C CNN
-	1    1900 6350
-	-1   0    0    -1  
-$EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J20
 U 1 1 5C59E879
@@ -54,7 +31,7 @@ U 2 1 5C59EAF4
 P 4500 2800
 F 0 "U2" H 4500 3125 50  0000 C CNN
 F 1 "4011" H 4500 3034 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 4500 2800 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4500 2800 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf" H 4500 2800 50  0001 C CNN
 	2    4500 2800
 	1    0    0    -1  
@@ -65,7 +42,7 @@ U 1 1 5C59EB5F
 P 3550 2300
 F 0 "R15" V 3757 2300 50  0000 C CNN
 F 1 "100k" V 3666 2300 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 3480 2300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3480 2300 50  0001 C CNN
 F 3 "~" H 3550 2300 50  0001 C CNN
 	1    3550 2300
 	0    -1   -1   0   
@@ -76,7 +53,7 @@ U 1 1 5C59EBF0
 P 3950 3200
 F 0 "R16" V 3743 3200 50  0000 C CNN
 F 1 "100k" V 3834 3200 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 3880 3200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3880 3200 50  0001 C CNN
 F 3 "~" H 3950 3200 50  0001 C CNN
 	1    3950 3200
 	0    1    1    0   
@@ -116,7 +93,7 @@ U 1 1 5C59EFC5
 P 3150 3400
 F 0 "C14" H 3265 3446 50  0000 L CNN
 F 1 "10n" H 3265 3355 50  0000 L CNN
-F 2 "Capacitor_THT:C_Disc_D8.0mm_W2.5mm_P5.00mm" H 3188 3250 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 3188 3250 50  0001 C CNN
 F 3 "~" H 3150 3400 50  0001 C CNN
 	1    3150 3400
 	1    0    0    -1  
@@ -143,7 +120,7 @@ U 1 1 5C59F2C3
 P 2900 3100
 F 0 "C13" H 3015 3146 50  0000 L CNN
 F 1 "1u" H 3015 3055 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W6.0mm_P5.00mm" H 2938 2950 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2938 2950 50  0001 C CNN
 F 3 "~" H 2900 3100 50  0001 C CNN
 	1    2900 3100
 	1    0    0    -1  
@@ -166,7 +143,7 @@ U 5 1 5C59F8EA
 P 3100 4950
 F 0 "U2" H 3330 4996 50  0000 L CNN
 F 1 "4011" H 3330 4905 50  0000 L CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3100 4950 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3100 4950 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf" H 3100 4950 50  0001 C CNN
 	5    3100 4950
 	1    0    0    -1  
@@ -177,7 +154,7 @@ U 3 1 5C59F9F8
 P 4300 4950
 F 0 "U2" H 4300 5275 50  0000 C CNN
 F 1 "4011" H 4300 5184 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 4300 4950 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 4300 4950 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf" H 4300 4950 50  0001 C CNN
 	3    4300 4950
 	1    0    0    -1  
@@ -188,7 +165,7 @@ U 4 1 5C59FA63
 P 5200 4950
 F 0 "U2" H 5200 5275 50  0000 C CNN
 F 1 "4011" H 5200 5184 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 5200 4950 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5200 4950 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf" H 5200 4950 50  0001 C CNN
 	4    5200 4950
 	1    0    0    -1  
@@ -210,7 +187,7 @@ U 1 1 5C59FB8F
 P 2500 4950
 F 0 "C12" H 2615 4996 50  0000 L CNN
 F 1 "1u" H 2615 4905 50  0000 L CNN
-F 2 "Capacitor_THT:C_Rect_L7.0mm_W6.0mm_P5.00mm" H 2538 4800 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2538 4800 50  0001 C CNN
 F 3 "~" H 2500 4950 50  0001 C CNN
 	1    2500 4950
 	1    0    0    -1  
@@ -274,8 +251,8 @@ L Transistor_BJT:BC547 Q2
 U 1 1 5C5A360E
 P 5600 2800
 F 0 "Q2" H 5791 2846 50  0000 L CNN
-F 1 "BC547" H 5791 2755 50  0000 L CNN
-F 2 "Package_TO_SOT_THT:TO-92L_Wide" H 5800 2725 50  0001 L CIN
+F 1 "MMBT3904" H 5791 2755 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5800 2725 50  0001 L CIN
 F 3 "http://www.fairchildsemi.com/ds/BC/BC547.pdf" H 5600 2800 50  0001 L CNN
 	1    5600 2800
 	1    0    0    -1  
@@ -286,7 +263,7 @@ U 1 1 5C5A3696
 P 5150 2800
 F 0 "R17" V 4943 2800 50  0000 C CNN
 F 1 "10k" V 5034 2800 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P5.08mm_Vertical" V 5080 2800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5080 2800 50  0001 C CNN
 F 3 "~" H 5150 2800 50  0001 C CNN
 	1    5150 2800
 	0    1    1    0   
@@ -328,46 +305,6 @@ Wire Wire Line
 	5700 2150 5700 2350
 Wire Wire Line
 	5700 2350 5850 2350
-$Comp
-L power:+12V #PWR06
-U 1 1 5C5A674F
-P 2400 6100
-F 0 "#PWR06" H 2400 5950 50  0001 C CNN
-F 1 "+12V" H 2415 6273 50  0000 C CNN
-F 2 "" H 2400 6100 50  0001 C CNN
-F 3 "" H 2400 6100 50  0001 C CNN
-	1    2400 6100
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2400 6100 2400 6350
-Wire Wire Line
-	2400 6350 2100 6350
-Wire Wire Line
-	2400 6350 2400 6950
-Wire Wire Line
-	2400 6950 2100 6950
-Connection ~ 2400 6350
-$Comp
-L power:GND #PWR01
-U 1 1 5C5A94A2
-P 2250 7200
-F 0 "#PWR01" H 2250 6950 50  0001 C CNN
-F 1 "GND" H 2255 7027 50  0000 C CNN
-F 2 "" H 2250 7200 50  0001 C CNN
-F 3 "" H 2250 7200 50  0001 C CNN
-	1    2250 7200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2100 6450 2250 6450
-Wire Wire Line
-	2250 6450 2250 7050
-Wire Wire Line
-	2100 7050 2250 7050
-Connection ~ 2250 7050
-Wire Wire Line
-	2250 7050 2250 7200
 $Comp
 L power:PWR_FLAG #FLG01
 U 1 1 5C5AB345
@@ -426,7 +363,7 @@ U 1 1 5C59E9C7
 P 3550 2800
 F 0 "U2" H 3550 3125 50  0000 C CNN
 F 1 "4011" H 3550 3034 50  0000 C CNN
-F 2 "Package_DIP:DIP-14_W7.62mm_LongPads" H 3550 2800 50  0001 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 3550 2800 50  0001 C CNN
 F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4011bms-12bms-23bms.pdf" H 3550 2800 50  0001 C CNN
 	1    3550 2800
 	1    0    0    -1  
