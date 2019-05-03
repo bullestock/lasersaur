@@ -4,7 +4,7 @@ EELAYER 26 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 2
 Title ""
 Date ""
 Rev ""
@@ -84,7 +84,7 @@ U 1 1 58F3B8FA
 P 2050 3250
 F 0 "C7" H 2075 3350 50  0000 L CNN
 F 1 "100n" H 2075 3150 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric" H 2088 3100 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2088 3100 50  0001 C CNN
 F 3 "" H 2050 3250 50  0001 C CNN
 	1    2050 3250
 	1    0    0    -1  
