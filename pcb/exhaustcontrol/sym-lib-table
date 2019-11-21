@@ -1,0 +1,8 @@
+(sym_lib_table
+  (lib (name 74xx)(type Legacy)(uri ${KIPRJMOD}/libs/74xx.lib)(options "")(descr ""))
+  (lib (name Connector_Generic)(type Legacy)(uri ${KIPRJMOD}/libs/Connector_Generic.lib)(options "")(descr ""))
+  (lib (name Device)(type Legacy)(uri ${KIPRJMOD}/libs/Device.lib)(options "")(descr ""))
+  (lib (name power)(type Legacy)(uri ${KIPRJMOD}/libs/power.lib)(options "")(descr ""))
+  (lib (name Transistor_BJT)(type Legacy)(uri ${KIPRJMOD}/libs/Transistor_BJT.lib)(options "")(descr ""))
+  (lib (name Mechanical)(type Legacy)(uri ${KIPRJMOD}/libs/Mechanical.lib)(options "")(descr ""))
+)
