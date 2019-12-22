@@ -1,0 +1,12 @@
+(sym_lib_table
+  (lib (name 4xxx)(type Legacy)(uri ${KIPRJMOD}/libs/4xxx.lib)(options "")(descr ""))
+  (lib (name 74xx)(type Legacy)(uri ${KIPRJMOD}/libs/74xx.lib)(options "")(descr ""))
+  (lib (name 74xx_IEEE)(type Legacy)(uri ${KIPRJMOD}/libs/74xx_IEEE.lib)(options "")(descr ""))
+  (lib (name Connector_Generic)(type Legacy)(uri ${KIPRJMOD}/libs/Connector_Generic.lib)(options "")(descr ""))
+  (lib (name Converter_ACDC)(type Legacy)(uri ${KIPRJMOD}/libs/Converter_ACDC.lib)(options "")(descr ""))
+  (lib (name Device)(type Legacy)(uri ${KIPRJMOD}/libs/Device.lib)(options "")(descr ""))
+  (lib (name g6b-1114c-us-dc5)(type Legacy)(uri ${KIPRJMOD}/libs/g6b-1114c-us-dc5.lib)(options "")(descr ""))
+  (lib (name power)(type Legacy)(uri ${KIPRJMOD}/libs/power.lib)(options "")(descr ""))
+  (lib (name Transistor_BJT)(type Legacy)(uri ${KIPRJMOD}/libs/Transistor_BJT.lib)(options "")(descr ""))
+  (lib (name w_relay)(type Legacy)(uri ${KIPRJMOD}/libs/w_relay.lib)(options "")(descr ""))
+)

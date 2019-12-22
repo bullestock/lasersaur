@@ -1,0 +1,40 @@
+( pcb2gcode 1.3.2 )
+( Software-independent Gcode )
+
+G94 ( Millimeters per minute feed rate. )
+G21 ( Units == Millimeters. )
+
+G90 ( Absolute coordinates. )
+S2 ( RPM spindle speed. )
+F128.00000 ( Feedrate. )
+
+F128.00000 ( Feedrate. )
+M3 ( Spindle on clockwise. )
+G04 P0 ( dwell for no time -- G64 should not smooth over this point )
+G00 Z3.00000 ( retract )
+
+G00 X-0.09320 Y0.11860 ( rapid move to begin. )
+G01 Z-0.70000 F128.00000 ( plunge. )
+G04 P0 ( dwell for no time -- G64 should not smooth over this point )
+F128.00000
+X-0.09320 Y0.11860
+X-0.11860 Y61.51040
+X-86.88500 Y61.48500
+X-86.88500 Y0.11860
+X-0.09320 Y0.11860
+G01 Z-1.40000 F128.00000 ( plunge. )
+G04 P0 ( dwell for no time -- G64 should not smooth over this point )
+F128.00000
+X-0.09320 Y0.11860
+X-0.11860 Y61.51040
+X-86.88500 Y61.48500
+X-86.88500 Y0.11860
+X-0.09320 Y0.11860
+
+G04 P0 ( dwell for no time -- G64 should not smooth over this point )
+G00 Z10.000 ( retract )
+
+M5 ( Spindle off. )
+M9 ( Coolant off. )
+M2 ( Program end. )
+
