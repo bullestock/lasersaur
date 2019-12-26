@@ -18,7 +18,7 @@ def cutout():
     return hull()(c + up(pch - 2*pcr)(c) + right(pcr)(c) + right(pcr)(up(pch - 2*pcr)(c)))
 
 def flange():
-    return translate([0, -25, 0])((cube([3*pcr, 3*pcr, 5])) - translate([1.5*pcr, 12, -1])(cylinder(d = 5, h = 7)))
+    return translate([0, 10, 0])((cube([3*pcr, 3*pcr, 5])) - translate([1.5*pcr, 17, -1])(cylinder(d = 5, h = 7)))
 
 def assembly():
     c = translate([2*pcr, th+1, 5+pcr])(cutout())
