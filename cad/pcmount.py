@@ -18,12 +18,12 @@ def cutout():
     return hull()(c + up(pch - 2*pcr)(c) + right(pcr)(c) + right(pcr)(up(pch - 2*pcr)(c)))
 
 def flange():
-    return translate([0, -25, 0])(cube([3*pcr, 3*pcr, 5]))
+    return translate([0, -25, 0])((cube([3*pcr, 3*pcr, 5])) - translate([1.5*pcr, 12, -1])(cylinder(d = 5, h = 7)))
 
 def assembly():
     c = translate([2*pcr, th+1, 5+pcr])(cutout())
     body = cube([3*pcr, th, pch + 5 + 5])
-    return body - c + flange() - translate([1.5*pcr, -12, -1])(cylinder(d = 5, h = 7))
+    return body - c + flange()
 
 if __name__ == '__main__':
     a = assembly()    
