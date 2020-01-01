@@ -101,7 +101,7 @@ F 3 "" H 2300 1800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1650 2050 2800 2050
+	1650 2050 2050 2050
 Wire Wire Line
 	2800 1950 2500 1950
 $Comp
@@ -413,7 +413,6 @@ Wire Wire Line
 	2350 5750 2350 5550
 NoConn ~ 4100 5650
 NoConn ~ 3100 5650
-NoConn ~ 1650 1750
 $Comp
 L Connector_Generic:Conn_01x01 J2
 U 1 1 5DFF6240
@@ -448,14 +447,14 @@ F 3 "~" H 1450 1750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1650 1900 2100 1900
+	1650 1900 1950 1900
 $Comp
 L Device:R R4
 U 1 1 5E034112
 P 2250 4200
 F 0 "R4" H 2320 4246 50  0000 L CNN
 F 1 "100k" H 2320 4155 50  0000 L CNN
-F 2 "" V 2180 4200 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0411_L9.9mm_D3.6mm_P7.62mm_Vertical" V 2180 4200 50  0001 C CNN
 F 3 "~" H 2250 4200 50  0001 C CNN
 	1    2250 4200
 	1    0    0    -1  
@@ -484,4 +483,35 @@ Connection ~ 2250 3000
 Wire Wire Line
 	2250 3000 2800 3000
 Connection ~ 2250 3750
+$Comp
+L Connector_Generic:Conn_01x03 J7
+U 1 1 5E0A80A3
+P 1450 2450
+F 0 "J7" H 1368 2767 50  0000 C CNN
+F 1 "Conn_01x03" H 1368 2676 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_Altech_AK300-3_P5.00mm" H 1450 2450 50  0001 C CNN
+F 3 "~" H 1450 2450 50  0001 C CNN
+	1    1450 2450
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1750 1850 1750
+Wire Wire Line
+	1850 1750 1850 2350
+Wire Wire Line
+	1850 2350 1650 2350
+Wire Wire Line
+	1950 1900 1950 2450
+Wire Wire Line
+	1950 2450 1650 2450
+Connection ~ 1950 1900
+Wire Wire Line
+	1950 1900 2100 1900
+Wire Wire Line
+	2050 2050 2050 2550
+Wire Wire Line
+	2050 2550 1650 2550
+Connection ~ 2050 2050
+Wire Wire Line
+	2050 2050 2800 2050
 $EndSCHEMATC
