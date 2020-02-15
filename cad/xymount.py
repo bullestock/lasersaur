@@ -17,6 +17,7 @@ ih = 8
 free1 = 2
 beam_w = 10
 free2 = 4
+insert_d = 4.5
 
 # Cube centered in x/y
 def c2cube(w, h, d):
@@ -34,7 +35,7 @@ def inner():
     th = 5
     o = right(beam_w/2)(c2cube(iw + 2*free1 + beam_w + 2*th, ih + 2*free2 + 2*th, overall_d))
     i = right(beam_w/2)(down(1)(c2cube(iw + 2*free1 + beam_w, ih + 2*free2, overall_d+2)))
-    sh = translate([0, ih/2 + free2 + th+1, overall_d/2])(rotate([90, 0, 0])(cylinder(d = 3.8, h = th+2)))
+    sh = translate([0, ih/2 + free2 + th+1, overall_d/2])(rotate([90, 0, 0])(cylinder(d = insert_d, h = th+2)))
     kh = 1
     r1 = translate([beam_w/2, -(ih/2 + free2), 0])(ridges(iw + 2*free1 + beam_w))
     r2 = translate([0, -(ih/2)-1+e, 0])(ridges(iw))
@@ -46,7 +47,7 @@ def outer():
     i = translate([beam_w/2, -beam_w/2, 0])(down(1)(c2cube(iw + 2*free1 + 2*free2 + beam_w + 2*th, ih + 2*free1 + 2*free2 + 2*th + beam_w, overall_d+2)))
     sh1 = translate([-2, ih/2 + free2 + free1 + 2*th+1, overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
     sh2 = translate([2, ih/2 + free2 + free1 + 2*th+1, overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
-    sh = translate([25, 10, overall_d/2])(rotate([90, 0, 90])(cylinder(d = 3.8, h = th+2)))
+    sh = translate([25, 10, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th+2)))
     kh = 1
     r1 = translate([-12, -1, 0])(rotate([0, 0, 90])(ridges(iw + 2*free1 + 2*free2 + th)))
     r2 = translate([-15, -5])(rotate([0, 0, 90])(ridges(iw + 2*free1 + 2*free2 + beam_w + 2*th)))
