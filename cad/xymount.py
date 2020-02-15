@@ -10,11 +10,12 @@ SEGMENTS = 32
 
 e = 0.0001
 
-overall_d = 7
+overall_d = 10
 
 iw = 10
 ih = 8
 free1 = 2
+beam_w = 10
 free2 = 4
 
 # Cube centered in x/y
@@ -22,7 +23,7 @@ def c2cube(w, h, d):
     return translate([-w/2, -h/2, 0])(cube([w, h, d]))
 
 def laserholder():
-    return c2cube(iw, ih, overall_d) + hole()(down(1)(cylinder(d = 6, h = overall_d+2)))
+    return c2cube(iw, ih, overall_d) + hole()(down(1)(cylinder(d = 6.5, h = overall_d+2)))
 
 def ridges(l):
     w = 1
@@ -31,19 +32,36 @@ def ridges(l):
     
 def inner():
     th = 5
-    o = c2cube(iw + 2*free1 + 2*th, ih + 2*free2 + 2*th, overall_d)
-    i = down(1)(c2cube(iw + 2*free1, ih + 2*free2, overall_d+2))
-    sh = translate([0, ih/2 + free2 + th+1, overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
+    o = right(beam_w/2)(c2cube(iw + 2*free1 + beam_w + 2*th, ih + 2*free2 + 2*th, overall_d))
+    i = right(beam_w/2)(down(1)(c2cube(iw + 2*free1 + beam_w, ih + 2*free2, overall_d+2)))
+    sh = translate([0, ih/2 + free2 + th+1, overall_d/2])(rotate([90, 0, 0])(cylinder(d = 3.8, h = th+2)))
     kh = 1
-    r1 = translate([0, -(ih/2 + free2), 0])(ridges(iw + 2*free1))
+    r1 = translate([beam_w/2, -(ih/2 + free2), 0])(ridges(iw + 2*free1 + beam_w))
     r2 = translate([0, -(ih/2)-1+e, 0])(ridges(iw))
     return o - i - sh + r1 + r2
+
+def outer():
+    th = 5
+    o = translate([beam_w/2, -beam_w/2, 0])(c2cube(iw + 2*free1 + 2*free2 + beam_w + 4*th, ih + 2*free1 + 2*free2 + 4*th + beam_w, overall_d))
+    i = translate([beam_w/2, -beam_w/2, 0])(down(1)(c2cube(iw + 2*free1 + 2*free2 + beam_w + 2*th, ih + 2*free1 + 2*free2 + 2*th + beam_w, overall_d+2)))
+    sh1 = translate([-2, ih/2 + free2 + free1 + 2*th+1, overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
+    sh2 = translate([2, ih/2 + free2 + free1 + 2*th+1, overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
+    sh = translate([25, 10, overall_d/2])(rotate([90, 0, 90])(cylinder(d = 3.8, h = th+2)))
+    kh = 1
+    r1 = translate([-12, -1, 0])(rotate([0, 0, 90])(ridges(iw + 2*free1 + 2*free2 + th)))
+    r2 = translate([-15, -5])(rotate([0, 0, 90])(ridges(iw + 2*free1 + 2*free2 + beam_w + 2*th)))
+    return o - i - hull()(sh1+sh2) + r1 + r2 - sh
 
 def assembly():
     lh = laserholder()
     i = inner()
-    iflex = right(iw/2 - 1)(cube([free1 + 2, .4, overall_d]))
-    return lh + i + iflex
+    o = outer()
+    bth = .4
+    iflex1 = translate([iw/2 - 1, ih/2 - bth, 0])(cube([free1 + beam_w + 2, bth, overall_d]))
+    iflex2 = translate([iw/2 - 1, -ih/2 - bth, 0])(cube([free1 + beam_w + 2, bth, overall_d]))
+    oflex1 = translate([-12, -25, 0])(cube([bth, free1 + beam_w + 2, overall_d]))
+    oflex2 = translate([22 - bth, -25, 0])(cube([bth, free1 + beam_w + 2, overall_d]))
+    return lh + i + iflex1 + iflex2 + o + oflex1 + oflex2
 
 if __name__ == '__main__':
     a = assembly()    
