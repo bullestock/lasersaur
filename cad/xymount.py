@@ -17,7 +17,7 @@ ih = 8
 free1 = 2
 beam_w = 10
 free2 = 4
-insert_d = 4.5
+insert_d = 4.2
 
 # Cube centered in x/y
 def c2cube(w, h, d):
