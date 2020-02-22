@@ -45,9 +45,9 @@ def outer():
     th = 5
     o = translate([beam_w/2, -beam_w/2, 0])(c2cube(iw + 2*free1 + 2*free2 + beam_w + 4*th, ih + 2*free1 + 2*free2 + 4*th + beam_w, overall_d))
     i = translate([beam_w/2, -beam_w/2, 0])(down(1)(c2cube(iw + 2*free1 + 2*free2 + beam_w + 2*th, ih + 2*free1 + 2*free2 + 2*th + beam_w, overall_d+2)))
-    sh1 = translate([-2, -(ih/2 + free2 + beam_w + th + 1), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
-    sh2 = translate([2, -(ih/2 + free2 + beam_w + th + 1), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
-    sh = translate([25, 5, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th+2)))
+    sh1 = translate([-2, -(ih/2 + free2 + beam_w + th + 3), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
+    sh2 = translate([2, -(ih/2 + free2 + beam_w + th + 3), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
+    sh = translate([27, 5, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th+2)))
     kh = 1
     r1 = translate([-14, 0, 0])(rotate([0, 0, 90])(ridges(iw + free1 + free2 + th)))
     r2 = translate([-17, -5])(rotate([0, 0, 90])(ridges(iw + 2*free1 + 2*free2 + beam_w + 2*th)))
@@ -55,10 +55,10 @@ def outer():
 
 def foot():
     y = 20
-    f = translate([5, y])(c2cube(80, 5, overall_d))
+    f = translate([5, y])(c2cube(90, 5, overall_d))
     h = translate([0, y+5, overall_d/2])(rotate([90])(cylinder(d = 5, h = 10)))
     hh = hull()(h + translate([5, 0, 0])(h))
-    return f - translate([-30, 0, 0])(hh) - translate([35, 0, 0])(hh)
+    return f - translate([-35, 0, 0])(hh) - translate([40, 0, 0])(hh)
 
 def assembly():
     lh = laserholder()
