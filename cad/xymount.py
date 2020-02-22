@@ -10,11 +10,11 @@ SEGMENTS = 32
 
 e = 0.0001
 
-overall_d = 10
+overall_d = 14
 
 iw = 10
 ih = 8
-free1 = 2
+free1 = 4
 beam_w = 10
 free2 = 4
 insert_d = 4.2
@@ -49,12 +49,12 @@ def outer():
     sh2 = translate([2, -(ih/2 + free2 + beam_w + th + 1), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
     sh = translate([25, 5, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th+2)))
     kh = 1
-    r1 = translate([-12, -1, 0])(rotate([0, 0, 90])(ridges(iw + 2*free1 + 2*free2 + th)))
-    r2 = translate([-15, -5])(rotate([0, 0, 90])(ridges(iw + 2*free1 + 2*free2 + beam_w + 2*th)))
+    r1 = translate([-14, 0, 0])(rotate([0, 0, 90])(ridges(iw + free1 + free2 + th)))
+    r2 = translate([-17, -5])(rotate([0, 0, 90])(ridges(iw + 2*free1 + 2*free2 + beam_w + 2*th)))
     return o - i - hull()(sh1+sh2) + r1 + r2 - sh
 
 def foot():
-    y = 18
+    y = 20
     f = translate([5, y])(c2cube(80, 5, overall_d))
     h = translate([0, y+5, overall_d/2])(rotate([90])(cylinder(d = 5, h = 10)))
     hh = hull()(h + translate([5, 0, 0])(h))
@@ -66,11 +66,15 @@ def assembly():
     o = outer()
     bth = .4
     iflex1 = translate([iw/2 - 1, ih/2 - bth, 0])(cube([free1 + beam_w + 2, bth, overall_d]))
-    iflex2 = translate([iw/2 - 1, -ih/2 - bth, 0])(cube([free1 + beam_w + 2, bth, overall_d]))
-    oflex1 = translate([-12, -25, 0])(cube([bth, free1 + beam_w + 2, overall_d]))
-    oflex2 = translate([22 - bth, -25, 0])(cube([bth, free1 + beam_w + 2, overall_d]))
+    iflex2 = translate([iw/2 - 1, -ih/2 - bth+1, 0])(cube([free1 + beam_w + 2, bth, overall_d]))
+    oflex1 = translate([-13, -27, 0])(cube([bth, 2*free1 + beam_w + 2, overall_d]))
+    oflex2 = translate([22 - bth, -27, 0])(cube([bth, free1 + beam_w + 2, overall_d]))
     return lh + i + iflex1 + iflex2 + o + oflex1 + oflex2 + foot()
 
 if __name__ == '__main__':
     a = assembly()    
     scad_render_to_file( a, file_header='$fn = %s;'%SEGMENTS, include_orig_code=True)
+
+# Local Variables:
+# compile-command: "python xymount.py"
+# End:
