@@ -28,11 +28,13 @@ def laserholder():
 
 def inner():
     th = 5
+    # Frame
     o = right(beam_w/2)(c2cube(iw + 2*free1 + beam_w + 2*th, ih + 2*free2 + 2*th, overall_d))
+    # Hole
     i = right(beam_w/2)(down(1)(c2cube(iw + 2*free1 + beam_w, ih + 2*free2, overall_d+2)))
-    sh = translate([0, -(ih/2 + free2 - 2), overall_d/2])(rotate([90, 0, 0])(cylinder(d = insert_d, h = th+3)))
-    kh = 1
-    return o - i - sh
+    # Screw hole
+    sh = translate([0, -(ih/2 + free2 - 1), overall_d/2])(rotate([90, 0, 0])(cylinder(d = insert_d, h = th+2)))
+    return o - i + sh
 
 def outer():
     th = 5
