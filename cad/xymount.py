@@ -37,16 +37,26 @@ def inner():
     i = right(beam_w/2)(down(1)(c2cube(iw + 2*free1 + beam_w, ih + 2*free2, overall_d+2)))
     # Screw hole
     sh = translate([0, -(ih/2 + free2 - 1), overall_d/2])(rotate([90, 0, 0])(cylinder(d = insert_d, h = th+2)))
-    return o - i - sh
+    # Bump for spring
+    bw = 5
+    bh = 5
+    b = translate([-(iw/2 + bw/2 + free1 + th - e), 0, 0])(c2cube(bw, bh, overall_d))
+    return o - i - sh + b
 
 def outer():
-    o = translate([beam_w/2, -beam_w/2, 0])(c2cube(inner_w + 2*free2 + 2*th, inner_h + 2*free1 + 2*th + beam_w, overall_d))
-    i = translate([beam_w/2, -beam_w/2, -1])(c2cube(inner_w + 2*free2, inner_h + 2*free1 + beam_w, overall_d+2))
-    sh1 = translate([-2, -(ih/2 + free2 + beam_w + th + 3), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
-    sh2 = translate([2, -(ih/2 + free2 + beam_w + th + 3), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
-    sh = translate([iw/2 + free1 + beam_w + th + free2 - 1, 5, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th+2)))
-    kh = 1
-    return o - i - hull()(sh1+sh2) - sh
+    free2l = free2+5
+    free2r = free2
+    o = translate([beam_w/2 - (free2l - free2r)/2, -beam_w/2, 0])(c2cube(inner_w + free2l + free2r + 2*th, inner_h + 2*free1 + 2*th + beam_w, overall_d))
+    i = translate([beam_w/2 - (free2l - free2r)/2, -beam_w/2, -1])(c2cube(inner_w + free2l + free2r, inner_h + 2*free1 + beam_w, overall_d+2))
+    sh1 = translate([-2, -(ih/2 + free2l + free2r + beam_w + th + 3), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
+    sh2 = translate([2, -(ih/2 + free2l + free2r + beam_w + th + 3), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
+    sh = translate([iw/2 + free1 + beam_w + th + free2l + free2r - 1, 5, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th+2)))
+    # Holder for spring
+    sprhw = 7
+    sprhh = 7
+    sprh1 = translate([-(iw/2 + free1 + th + free2l - e), -(iw/2 + free2 + 2*th + beam_w), 0])(cube([sprhw, sprhh, overall_d]))
+    sprh2 = translate([-(iw/2 + free1 + th + free2l - e), ih/2 + free2 + th + free1 - sprhh, 0])(cube([sprhw, sprhh, overall_d]))
+    return o - i - hull()(sh1+sh2) - sh + sprh1 + sprh2
 
 def foot():
     y = 20
