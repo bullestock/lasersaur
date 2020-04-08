@@ -26,10 +26,13 @@ def c2cube(w, h, d):
 def laserholder():
     return c2cube(iw, ih, overall_d) + hole()(down(1)(cylinder(d = 6.5, h = overall_d+2)))
 
+th = 5
+inner_w = iw + 2*free1 + beam_w + 2*th
+inner_h = ih + 2*free2 + 2*th
+
 def inner():
-    th = 5
     # Frame
-    o = right(beam_w/2)(c2cube(iw + 2*free1 + beam_w + 2*th, ih + 2*free2 + 2*th, overall_d))
+    o = right(beam_w/2)(c2cube(inner_w, inner_h, overall_d))
     # Hole
     i = right(beam_w/2)(down(1)(c2cube(iw + 2*free1 + beam_w, ih + 2*free2, overall_d+2)))
     # Screw hole
@@ -37,9 +40,8 @@ def inner():
     return o - i + sh
 
 def outer():
-    th = 5
-    o = translate([beam_w/2, -beam_w/2, 0])(c2cube(iw + 2*free1 + 2*free2 + beam_w + 4*th, ih + 2*free1 + 2*free2 + 4*th + beam_w, overall_d))
-    i = translate([beam_w/2, -beam_w/2, 0])(down(1)(c2cube(iw + 2*free1 + 2*free2 + beam_w + 2*th, ih + 2*free1 + 2*free2 + 2*th + beam_w, overall_d+2)))
+    o = translate([beam_w/2, -beam_w/2, 0])(c2cube(inner_w + 2*free2 + 2*th, inner_h + 2*free1 + 2*th + beam_w, overall_d))
+    i = translate([beam_w/2, -beam_w/2, -1])(c2cube(inner_w + 2*free2, inner_h + 2*free1 + beam_w, overall_d+2))
     sh1 = translate([-2, -(ih/2 + free2 + beam_w + th + 3), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
     sh2 = translate([2, -(ih/2 + free2 + beam_w + th + 3), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
     sh = translate([27, 5, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th+2)))
