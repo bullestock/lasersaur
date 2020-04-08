@@ -17,7 +17,7 @@ ih = 8
 free1 = 4
 beam_w = 10
 free2 = 4
-insert_d = 4.2
+insert_d = 4.1
 
 # Cube centered in x/y
 def c2cube(w, h, d):
@@ -26,20 +26,13 @@ def c2cube(w, h, d):
 def laserholder():
     return c2cube(iw, ih, overall_d) + hole()(down(1)(cylinder(d = 6.5, h = overall_d+2)))
 
-def ridges(l):
-    w = 1
-    h = 1
-    return translate([0, h/2-e, 0])(up(overall_d-w)(c2cube(l, h, w)) + c2cube(l, h, w))
-    
 def inner():
     th = 5
     o = right(beam_w/2)(c2cube(iw + 2*free1 + beam_w + 2*th, ih + 2*free2 + 2*th, overall_d))
     i = right(beam_w/2)(down(1)(c2cube(iw + 2*free1 + beam_w, ih + 2*free2, overall_d+2)))
     sh = translate([0, -(ih/2 + free2 - 2), overall_d/2])(rotate([90, 0, 0])(cylinder(d = insert_d, h = th+3)))
     kh = 1
-    r1 = translate([beam_w/2, (ih/2 + free2) - 1, 0])(ridges(iw + 2*free1 + beam_w))
-    r2 = translate([0, (ih/2)-e, 0])(ridges(iw))
-    return o - i - sh + r1 + r2
+    return o - i - sh
 
 def outer():
     th = 5
@@ -49,9 +42,7 @@ def outer():
     sh2 = translate([2, -(ih/2 + free2 + beam_w + th + 3), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
     sh = translate([27, 5, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th+2)))
     kh = 1
-    r1 = translate([-14, 0, 0])(rotate([0, 0, 90])(ridges(iw + free1 + free2 + th)))
-    r2 = translate([-17, -5])(rotate([0, 0, 90])(ridges(iw + 2*free1 + 2*free2 + beam_w + 2*th)))
-    return o - i - hull()(sh1+sh2) + r1 + r2 - sh
+    return o - i - hull()(sh1+sh2)- sh
 
 def foot():
     y = 20
