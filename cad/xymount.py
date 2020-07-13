@@ -40,11 +40,21 @@ def inner():
     i = right(flex_length/2-1)(down(1)(c2cube(iw + free_x + flex_length, ih + free_yl + free_yu, overall_d+2)))
     # Screw hole
     sh = translate([0, -(ih/2 + free_yl - th), overall_d/2])(rotate([90, 0, 0])(cylinder(d = insert_d, h = th+2)))
-    # Bump for spring
+    # Bump for Y spring
     bw = 10
     bh = 5
-    b = translate([-(iw/2 + bw/2 + free_x - e), 0, 0])(c2cube(bw, bh, overall_d))
-    return o - i - sh + b
+    y_bump = translate([-(iw/2 + bw/2 + free_x - e), 0, 0])(c2cube(bw, bh, overall_d))
+    # Holder for spring
+    sprhw = 3
+    sprhh = 5
+    sprh1 = trans(-(iw/2 + free_x), th + 2, 0, (cube([sprhw, sprhh, overall_d]) - trans(0, -1, 1, cube([sprhw+1, 2, overall_d - 2]))))
+    sprhw = 15
+    sprh2 = trans(iw/2 + flex_length - sprhw + 2, th + 2, 0, (cube([sprhw, sprhh, overall_d]) - trans(0, -1, 1, cube([sprhw+1, 2, overall_d - 2]))))
+    # Bump for Y spring
+    bw = 5
+    bh = 10
+    x_bump = trans(0, ih/2, 0, c2cube(bw, bh, overall_d))
+    return o - i - sh + x_bump + y_bump + sprh1 + sprh2
 
 def outer():
     free_xl = free_x+5
@@ -71,12 +81,13 @@ def foot():
     return f - translate([-38, 0, 0])(hh) - translate([38, 0, 0])(hh)
 
 def assembly():
-    lh = laserholder()
+    lh_offset = 3
+    lh = trans(0, -lh_offset, 0, laserholder())
     i = inner()
     o = outer()
-    bth = .4
-    iflex1 = translate([iw/2 - 1, ih/2 - bth, 0])(cube([flex_length + 2, bth, overall_d]))
-    iflex2 = translate([iw/2 - 1, -ih/2 - bth+1, 0])(cube([flex_length + 2, bth, overall_d]))
+    bth = .8
+    iflex1 = translate([iw/2 - 1, ih/2 - bth - lh_offset, 0])(cube([flex_length + 2, bth, overall_d]))
+    iflex2 = translate([iw/2 - 1, -ih/2 - bth+1 - lh_offset, 0])(cube([flex_length + 2, bth, overall_d]))
     oflex1 = translate([-11, -27, 0])(cube([bth, flex_length + 2, overall_d]))
     oflex2 = translate([25, -27, 0])(cube([bth, flex_length + 2, overall_d]))
     return lh + i + iflex1 + iflex2 + o + oflex1 + oflex2 + foot()
