@@ -68,13 +68,14 @@ def outer():
     sh = translate([iw/2 + free_x + flex_length + th + free_xr - 1, 5, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th*2)))
     # Holder for spring
     sprhw = 7
-    sprhh = 7
-    sprh1 = translate([-(iw/2 + free_x + th + free_xl - e), -26, 0])(cube([sprhw, sprhh, overall_d]) - translate([sprhw-1, 0, 1])(cube([2, sprhh+1, overall_d - 2])))
+    sprhh = 20
+    sprh1 = translate([-(iw/2 + free_x + th + free_xl - e), -28, 0])(cube([sprhw, sprhh, overall_d]) - translate([sprhw-1, 0, 1])(cube([2, sprhh+1, overall_d - 2])))
+    sprhh = 10
     sprh2 = translate([-(iw/2 + free_x + th + free_xl - e), 18, 0])(cube([sprhw, sprhh, overall_d]) - translate([sprhw-1, -1, 1])(cube([2, sprhh+1, overall_d - 2])))
     return o - i - hull()(sh1+sh2) - sh + sprh1 + sprh2
 
 def foot():
-    y = 27.5
+    y = 24.5
     f = translate([3, y])(c2cube(92, 5, overall_d))
     h = translate([0, y+5, overall_d/2])(rotate([90])(cylinder(d = 5, h = 10)))
     hh = hull()(h + translate([5, 0, 0])(h))
@@ -84,13 +85,13 @@ def assembly():
     lh_offset = 3
     lh = trans(0, -lh_offset, 0, laserholder())
     i = inner()
-    o = outer()
-    bth = .8
+    o = trans(0, -5, 0, outer())
+    bth = .6
     iflex1 = translate([iw/2 - 1, ih/2 - bth - lh_offset, 0])(cube([flex_length + 2, bth, overall_d]))
     iflex2 = translate([iw/2 - 1, -ih/2 - bth+1 - lh_offset, 0])(cube([flex_length + 2, bth, overall_d]))
-    oflex1 = translate([-11, -27, 0])(cube([bth, flex_length + 2, overall_d]))
-    oflex2 = translate([25, -27, 0])(cube([bth, flex_length + 2, overall_d]))
-    return lh + i + iflex1 + iflex2 + o + oflex1 + oflex2 + foot()
+    oflex1 = translate([-11, -32, 0])(cube([bth, flex_length + 2, overall_d]))
+    oflex2 = translate([25, -32, 0])(cube([bth, flex_length + 2, overall_d]))
+    return lh + iflex1 + iflex2 + oflex1 + oflex2 + foot() + o + i
 
 if __name__ == '__main__':
     a = assembly()    
