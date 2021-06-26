@@ -1,0 +1,159 @@
+(kicad_symbol_lib (version 20210619) (generator kicad_symbol_editor)
+  (symbol "ums05-1a80-75d:UMS05-1A80-75D" (in_bom yes) (on_board yes)
+    (property "Reference" "K" (id 0) (at 7.62 3.81 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "UMS05-1A80-75D" (id 1) (at 7.62 1.27 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Relay_THT:Relay_StandexMeder_UMS" (id 2) (at 7.62 -1.27 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (property "Datasheet" "https://standexelectronics.com/de/produkte/ums-reed-relais/" (id 3) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_keywords" "Single Pole Reed Relay SPST" (id 4) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_description" "Standex Meder UMS reed relay, SPST, Closing Contact, with diode" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "ki_fp_filters" "Relay*StandexMeder*UMS*" (id 6) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (symbol "UMS05-1A80-75D_0_0"
+      (polyline
+        (pts
+          (xy 5.08 5.08)
+          (xy 5.08 2.54)
+          (xy 4.445 3.175)
+          (xy 5.08 3.81)
+        )
+        (stroke (width 0)) (fill (type none))
+      )
+    )
+    (symbol "UMS05-1A80-75D_0_1"
+      (circle (center -5.08 -3.81) (radius 0.2794) (stroke (width 0)) (fill (type outline)))
+      (circle (center -5.08 3.81) (radius 0.254) (stroke (width 0)) (fill (type outline)))
+      (rectangle (start -8.255 1.905) (end -1.905 -1.905)
+        (stroke (width 0.254)) (fill (type none))
+      )
+      (rectangle (start -11.049 5.08) (end 6.731 -5.08)
+        (stroke (width 0.254)) (fill (type background))
+      )
+      (polyline
+        (pts
+          (xy -8.89 0)
+          (xy -10.16 0)
+        )
+        (stroke (width 0)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -7.62 -1.905)
+          (xy -2.54 1.905)
+        )
+        (stroke (width 0.254)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -5.08 -5.08)
+          (xy -5.08 -1.905)
+        )
+        (stroke (width 0)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -5.08 5.08)
+          (xy -5.08 1.905)
+        )
+        (stroke (width 0)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -1.905 0)
+          (xy -1.27 0)
+        )
+        (stroke (width 0.254)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -0.635 0)
+          (xy 0 0)
+        )
+        (stroke (width 0.254)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 0.635 0)
+          (xy 1.27 0)
+        )
+        (stroke (width 0.254)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 1.905 0)
+          (xy 2.54 0)
+        )
+        (stroke (width 0.254)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 3.175 0)
+          (xy 3.81 0)
+        )
+        (stroke (width 0.254)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 5.08 -2.54)
+          (xy 3.175 3.81)
+        )
+        (stroke (width 0.508)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 5.08 -2.54)
+          (xy 5.08 -5.08)
+        )
+        (stroke (width 0)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -9.525 0)
+          (xy -8.89 -1.27)
+          (xy -10.16 -1.27)
+          (xy -9.525 0)
+        )
+        (stroke (width 0)) (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -5.08 3.81)
+          (xy -9.525 3.81)
+          (xy -9.525 -3.81)
+          (xy -5.08 -3.81)
+        )
+        (stroke (width 0)) (fill (type none))
+      )
+    )
+    (symbol "UMS05-1A80-75D_1_1"
+      (pin passive line (at -5.08 -7.62 90) (length 2.54)
+        (name "~" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+      (pin passive line (at -5.08 7.62 270) (length 2.54)
+        (name "~" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin passive line (at 5.08 -7.62 90) (length 2.54)
+        (name "~" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin passive line (at 5.08 7.62 270) (length 2.54)
+        (name "~" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+)
