@@ -13,9 +13,13 @@ e = 0.0001
 
 overall_d = 14
 
+# Thickness of beams
+th_x = 10
+th_y = 5
+
 iw = 10
 ih = 8
-free_yl = 11
+free_yl = 6
 free_yu = 4
 flex_length = 14
 free_x = 4
@@ -28,51 +32,29 @@ def c2cube(w, h, d):
 def laserholder():
     return c2cube(iw, ih, overall_d) + hole()(down(1)(cylinder(d = 6.5, h = overall_d+2)))
 
-# Thickness of beams
-th = 5
-inner_w = iw + free_x + flex_length + 2*th
-inner_h = ih + free_yl + free_yu + 2*th
+inner_w = iw + free_x + flex_length + 2*th_x
+inner_h = ih + free_yl + th_y + free_yu + 2*th_y
 
 def inner():
     # Frame
     o = right(flex_length/2)(c2cube(inner_w, inner_h, overall_d))
     # Hole
-    i = right(flex_length/2-1)(down(1)(c2cube(iw + free_x + flex_length, ih + free_yl + free_yu, overall_d+2)))
+    i = right(flex_length/2-1)(down(1)(c2cube(iw + free_x + flex_length, ih + free_yl + th_y + free_yu, overall_d+2)))
     # Screw hole
-    sh = translate([0, -(ih/2 + free_yl - th), overall_d/2])(rotate([90, 0, 0])(cylinder(d = insert_d, h = th+2)))
-    # Bump for Y spring
-    bw = 10
-    bh = 5
-    y_bump = translate([-(iw/2 + bw/2 + free_x - e), 0, 0])(c2cube(bw, bh, overall_d))
-    # Holder for spring
-    sprhw = 3
-    sprhh = 5
-    sprh1 = trans(-(iw/2 + free_x), th + 2, 0, (cube([sprhw, sprhh, overall_d]) - trans(0, -1, 1, cube([sprhw+1, 2, overall_d - 2]))))
-    sprhw = 15
-    sprh2 = trans(iw/2 + flex_length - sprhw + 2, th + 2, 0, (cube([sprhw, sprhh, overall_d]) - trans(0, -1, 1, cube([sprhw+1, 2, overall_d - 2]))))
-    # Bump for Y spring
-    bw = 5
-    bh = 10
-    x_bump = trans(0, ih/2, 0, c2cube(bw, bh, overall_d))
-    return o - i - sh + x_bump + y_bump + sprh1 + sprh2
+    sh = translate([0, -(ih/2 + free_yl), overall_d/2])(rotate([90, 0, 0])(cylinder(d = insert_d, h = th_y+2)))
+    return o - i - sh
 
 def outer():
     free_xl = free_x+5
     free_xr = free_x
-    oh = th + flex_length + inner_h + free_yu + th
-    o = translate([flex_length/2 - (free_xl - free_xr)/2, -oh/2 + ih/2 + free_yl + 3*th, 0])(c2cube(inner_w + free_xl + free_xr + 2*th, oh, overall_d))
+    oh = th_y + flex_length + inner_h + free_yu + th_y
+    o = translate([flex_length/2 - (free_xl - free_xr)/2, -oh/2 + ih/2 + free_yl + 4*th_y, 0])(c2cube(inner_w + free_xl + free_xr + 2*th_x, oh, overall_d))
     oih = inner_h + free_yu + flex_length
-    i = translate([flex_length/2 - (free_xl - free_xr)/2, -oih/2 + ih/2 + free_yl + 2*th, -1])(c2cube(inner_w + free_xl + free_xr, oih, overall_d+2))
-    sh1 = translate([-2, -(ih/2 + free_yl + flex_length - th + 1), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
-    sh2 = translate([2, -(ih/2 + free_yl + flex_length - th + 1), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th+2)))
-    sh = translate([iw/2 + free_x + flex_length + th + free_xr - 1, 5, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th*2)))
-    # Holder for spring
-    sprhw = 7
-    sprhh = 20
-    sprh1 = translate([-(iw/2 + free_x + th + free_xl - e), -28, 0])(cube([sprhw, sprhh, overall_d]) - translate([sprhw-1, 0, 1])(cube([2, sprhh+1, overall_d - 2])))
-    sprhh = 10
-    sprh2 = translate([-(iw/2 + free_x + th + free_xl - e), 18, 0])(cube([sprhw, sprhh, overall_d]) - translate([sprhw-1, -1, 1])(cube([2, sprhh+1, overall_d - 2])))
-    return o - i - hull()(sh1+sh2) - sh + sprh1 + sprh2
+    i = translate([flex_length/2 - (free_xl - free_xr)/2, -oih/2 + ih/2 + free_yl + 3*th_y, -1])(c2cube(inner_w + free_xl + free_xr, oih, overall_d+2))
+    sh1 = translate([-2, -(ih/2 + free_yl + flex_length + 1), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th_y+2)))
+    sh2 = translate([2, -(ih/2 + free_yl + flex_length + 1), overall_d/2])(rotate([90, 0, 0])(cylinder(d = 5, h = th_y+2)))
+    sh = translate([iw/2 + free_x + flex_length + .5*th_x + free_xr - 1, 5, overall_d/2])(rotate([90, 0, 90])(cylinder(d = insert_d, h = th_y*2)))
+    return o - i - hull()(sh1+sh2) - sh
 
 def foot():
     y = 24.5
