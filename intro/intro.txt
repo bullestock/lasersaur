@@ -16,7 +16,7 @@ Opbygning
 - Udsugning
 - Chiller
 - Kortlæser - adgang, logging
-- Raspi+Arduino
+- PC+MKS-SBASE
 - Interlocks
 
 Materialer
@@ -24,20 +24,15 @@ Materialer
 - Gravering/skæring
 - Metaller kan ikke skæres, men kan markeres (kemisk reaktion)
 
-LasaurApp
-- Web
+Wiki (QR/søg)
+- Hovedside
+- Materiale-DB
+LaserWeb
 - Home/pause/stop
-  - Reset ATMega
 - Move/jog/cut
 - Offset
 - Import
-  - Library jobs
-  - SVG dpi
-  - DXF - subset
-  - Coordinate display
-- Add to queue
-- Assign colours
-  - Max 8000 mm/min
+  - Assign colours
 - Bounding box
 - Cut - altid under opsyn!
 
